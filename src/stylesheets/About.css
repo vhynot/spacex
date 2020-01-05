@@ -1,0 +1,263 @@
+@font-face {
+  font-family: SansProSemiBold;
+  src: url('../font/Source_Sans_Pro/SourceSansPro-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: SansProRegular;
+  src: url('../font/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: SansProBold;
+  src: url('../font/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+  font-family: SansProLight;
+  src: url('../font/Source_Sans_Pro/SourceSansPro-Light.ttf');
+}
+
+@font-face {
+  font-family: SansProExtraLight;
+  src: url('../font/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf');
+}
+
+                      /* /////////////////////
+                            ABOUT
+                      ///////////////////// */
+
+.section-first-about{
+  background: url(../img/Moon_rocket.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: SansProBold;
+  letter-spacing: 0.5em;
+  font-size: 1.8em;
+}
+.section-first-about h3{
+  text-shadow: 1.8px 1.8px #da4078;
+}
+ 
+/* .section-first-about-box{
+} */
+
+                      /* /////////////////////
+                            SECTION TWO
+                      ///////////////////// */
+
+.section-second-about{
+  background: rgba(0, 0, 7, 0.938);
+  display: flex;
+  width: 100%;
+  min-height: 150vh;
+}
+
+  .section-second-about-p{
+  position: relative;
+  }
+
+        .layer-1{
+          position: absolute;
+          background: #070b0e;
+          left: 37%;
+          top:5%;
+          height: 96%;
+          width: 58%;
+          z-index: -2;
+        }
+        .layer-2{
+          position: absolute;
+          background:#d69aa6;
+          left: 4%;
+          top:40%;
+          height: 60%;
+          width: 58%;
+          z-index: -1;
+        }
+
+        .layer-3{
+          position: absolute;
+          background: #20273bb3;
+          left: 12%;
+          top:73%;
+          height: 27%;
+          width: 75%;
+          z-index: 0;
+        }
+
+    .section-second-about-first-div{
+      display: flex;
+      align-items: center;
+      height: 33%;
+      margin-right: 8%;
+      margin-left: 42%;
+      margin-top: 3%;
+    }
+
+      .about-first-p{
+        font-family: SansProExtraLight;
+        font-size: 1.4em;
+        line-height: 1.35em;
+        letter-spacing: 0.09em;
+        color: #8e98cb;
+        position: relative;
+      }
+
+    .section-second-about-second-div{
+      display:flex;
+      align-items: center;
+      height: 33%;
+      margin-left: 8%;
+      margin-right: 42%;
+    }
+
+      .about-second-p{
+        font-family: SansProExtraLight;
+        font-size: 1.4em;
+        color: #8e98cb;
+        line-height: 1.35em;
+        letter-spacing: 0.09em;
+        position: relative;
+      }
+
+  .section-second-about-third-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 34%;
+    width: 100%; 
+  }
+    .section-second-about-third-div-flex-1{
+      position: absolute;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      text-align: center;
+      height: 60%;
+      width:35%;
+      background: #181c2c;
+      left: 19.5%;
+    }
+  
+    .section-second-tabel{
+      display: inline-table;
+      width: 80%;
+    }
+
+    .tabel-font-1{
+      font-family: SansProLight;
+      font-size: 1.3em;
+      letter-spacing: 0.05em;
+      padding-bottom: 0.5em;
+    }
+
+    .tabel-font-2{
+      font-family: SansProBold;
+      text-shadow: 0.4px 0.4px #da4078;
+      font-size: 1.3em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .tabel-font-3{
+      font-family: SansProBold;
+      font-size: 1.5em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-shadow: 0.5px 0.5px #da4078;
+    }
+
+    .tabel-font-4{
+      font-family: SansProLight;
+      font-size: 1.3em;
+      letter-spacing: 0.15em;
+    }
+    .section-second-about-third-div-flex-2{
+      position: absolute;
+      display: block;
+      padding-top: 3%;
+      height: 60%;
+      width:18%;
+      background: #1b1f2f; 
+      right: 16.5%;
+    }
+  
+    .headquarter-1{
+     display: block;
+     margin: 12% auto;
+     text-align: center;
+    }
+    .headquarter-2{
+      display: block;
+      margin: 15% auto;
+      text-align: center;
+    }
+
+
+
+                      /* /////////////////////
+                            SECTION THREE
+                      ///////////////////// */
+
+.section-third-about{
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+}
+                      
+.leaflet{
+  background: #101017;
+  display:flex;
+  justify-content: center;
+  min-width: 75%;
+}
+#map{
+  margin: 14vh 0;
+  min-width:80%;
+  height: 50vh;
+}
+
+div.leaflet-popup-content-wrapper{
+  display:flex;
+  text-align: center;
+  background: #696969;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+div.leaflet-popup-tip{
+  background: #696969;
+}
+
+div.leaflet-control-attribution.leaflet-control{
+
+  background: none;
+  color: dimgray;
+}
+
+.leaflet-container a{
+  text-decoration: none;
+  color: dimgray; 
+}
+
+a.leaflet-control-zoom-out,a.leaflet-control-zoom-in{
+  background: #262626;
+  border-bottom-color:#262626;
+  color: dimgray;
+}
+
+img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive{
+ opacity: 0.5;
+}
+img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive:hover{
+  opacity: 1;
+ }

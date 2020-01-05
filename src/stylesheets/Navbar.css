@@ -1,0 +1,46 @@
+                        /* /////////////////////
+                                  Navbar
+                        ///////////////////// */
+.back-layer{
+    background: rgba(48,48,62,1);
+}
+
+.nav-container{
+    background: rgba(0, 0, 2, 0.774);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 8vh;
+    color: rgb(255 ,255 , 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.nav-links li{
+    color: white;
+    display: flex;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+}
+
+.nav-links li:hover{
+    color: grey;
+}
+
+.logo{
+    height: 35px;
+    width: 250px;
+    transition: 0.2s;
+}
+
+.nav-container img:hover {
+ filter: drop-shadow(2px 2px 2px  rgb(255, 255, 255));
+        }
