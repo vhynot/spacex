@@ -189,7 +189,7 @@ a{
   object-position: center center;
   opacity: 0.6;
   transition: 0.25s;
-  filter: grayscale(10%);
+  filter: grayscale(5%);
 }
 
 .rocket > a:hover {
@@ -199,7 +199,7 @@ a{
 
 .rocket > .anchor:hover > .rocket-resize{
   opacity: 0.4;
-  filter: blur(1.5px) grayscale(70%);
+  filter: blur(1.8px) grayscale(70%);
   border-radius: 1% 1% 1% 1%;
 }
 

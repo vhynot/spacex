@@ -69,7 +69,7 @@ function About(){
                   </div>
                 </div>
             </section>
-            <section classname="section-third-about">
+            <section className="section-third-about">
               <div>
                   <div className="leaflet">
                       <Leaflet />

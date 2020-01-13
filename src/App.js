@@ -8,7 +8,7 @@ import About from "./components/routes/About"
 import SpaceFleet from "./components/routes/SpaceFleet"
 import Careers from "./components/routes/Careers"
 import History from "./components/routes/History"
-import RocketTemplate from "./components/individualRocket/RocketTemplate"
+import RocketTemplate from "./components/routes/RocketTemplate"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Footer from "./components/partials/Footer"

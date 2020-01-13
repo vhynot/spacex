@@ -33,7 +33,6 @@ function SpaceFleet() {
                                 />
           )}
 )
- 
     return (
           <div className="container">
                   {spreadRocket}
