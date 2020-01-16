@@ -1,15 +1,16 @@
                         /* /////////////////////
                                   Navbar
                         ///////////////////// */
-.back-layer{
-    background: rgba(48,48,62,1);
+body{
+    overflow-x: hidden;
 }
 
 .nav-container{
-    background: rgba(0, 0, 2, 0.774);
-    position: relative;
+    background: rgba(11, 11, 17, 1);
+    position: sticky;
     top: 0;
     left: 0;
+    z-index: 50;
     width: 100%;
     min-height: 8vh;
     color: rgb(255 ,255 , 255);
@@ -19,28 +20,284 @@
 }
 
 .nav-links{
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    z-index:10000;
     display: flex;
-    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     justify-content: space-around;
+    height: 92vh;
+    width: 50vw;
+    background: rgba(11, 11, 17, 0.8);
+    transform: translate(100%);
+    transition: 0.5s ease-in;
+  
+}
+
+.nav-links a{
+    text-decoration: none;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a li:hover{
+    background: rgb(142, 147, 172, 0.3);
+    font-size: 1.2em;
 }
 
 .nav-links li{
     color: white;
+    list-style: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    opacity: 1;
     display: flex;
-    font-size: 1.3rem;
-    letter-spacing: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}   
+
+.nav-active{
+    transform: translateX(0);
 }
 
-.nav-links li:hover{
-    color: grey;
+.nav-inactive{
+    transform: translateX(100%);
+    transition-delay: 0.4s;
+}
+
+.burger{
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: white;
 }
 
 .logo{
+    padding-right: 35px;
     height: 35px;
     width: 250px;
-    transition: 0.2s;
+    -webkit-transition: filter 0.7s ease-in-out;
+    -moz-transition: filter 0.7s ease-in-out;
+    -ms-transition: filter 0.7s ease-in-out;
+    -o-transition: filter 0.7s ease-in-out;
 }
 
 .nav-container img:hover {
- filter: drop-shadow(2px 2px 2px  rgb(255, 255, 255));
-        }
+ filter: drop-shadow(3px 3px 3px  rgb(255, 255, 255, 0.5));
+
+}
+
+.nav-links-fadein-1{
+    animation: NavLinkFadeIn 1.2s ease backwards;
+}
+
+.nav-links-fadeout-1{
+    animation: NavLinkFadeOut 1.2s ease forwards ;
+}
+
+.nav-links-fadein-2{
+    animation: NavLinkFadeIn 1.2s ease backwards 0.1s;
+}
+
+.nav-links-fadeout-2{
+    animation: NavLinkFadeOut 1.2s ease forwards 0.1s;
+}
+
+.nav-links-fadein-3{
+    animation: NavLinkFadeIn 1.2s ease backwards 0.2s;
+}
+
+.nav-links-fadeout-3{
+    animation: NavLinkFadeOut 1.2s ease forwards 0.2s;
+}
+
+.nav-links-fadein-4{
+    animation: NavLinkFadeIn 1.2s ease backwards 0.3s;
+}
+
+.nav-links-fadeout-4{
+    animation: NavLinkFadeOut 1.2s ease forwards 0.3s;
+}
+
+.burger div{
+    border-radius: 20%;
+}
+
+
+.ham-div-1{
+    transform: rotate(-90deg) translate( -6px, 8px);
+    transition: 0.2s;
+}
+.ham-div-2{
+    transform: rotate(-90deg) translate(-2px, 0px);
+    transition: 0.1s;
+}
+
+.ham-div-3{
+    transform: rotate(-90deg) translate( 10px, -8px);
+    transition: 0.2s;
+}
+
+.ham-1{
+    transform: none;
+    transition: 0.2s;
+}
+.ham-2{
+    transform: none;
+    transition: 0.1s;
+}
+
+.ham-3{
+    transform: none;
+    transition: 0.2s;
+}
+
+
+@keyframes NavLinkFadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes NavLinkFadeOut{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    /* .nav-container{
+        background:green;
+    } */
+    a li{
+        position: relative;
+        background: none;
+        font-size: 1.1rem;
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    /* .nav-container{
+        background: greenyellow;
+    } */
+
+    .nav-links li{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-links{
+        width: 42%;
+        position: relative;
+        margin-top: 0;
+        height: auto;
+        background: none;
+        top: 0;
+        flex-direction: unset;
+        justify-content: space-around;
+        transform: translate(0);  
+    }
+
+    .nav-links a{
+        display: block;
+        height: auto;
+        width: auto;
+
+    }
+
+    a li{
+        position: relative;
+        background: none;
+        font-size: 1.1rem;
+    }
+
+    a li:hover{
+        background:rgba(11, 11, 17, 1);
+        font-size: 1.1rem;
+    }
+
+    a li:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -10px;
+        left: 0;
+        background-color: rgb(61, 99, 135);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    a li:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    .nav-links-fadein-1, .nav-links-fadeout-1,.nav-links-fadein-2, .nav-links-fadeout-2,
+    .nav-links-fadein-3, .nav-links-fadeout-3,.nav-links-fadein-4, .nav-links-fadeout-4{
+            animation: none;
+    }
+
+    .nav-active, .nav-inactive{
+        transform: translateX(0);
+        transition-delay: 0s;
+    }
+
+    .burger{
+        display: none;
+    }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    /* .nav-container{
+        background: purple;
+    } */
+    
+    .nav-links li{
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .nav-links{
+      width: 44%;
+    }
+    
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    /* .nav-container{
+        background: hotpink;
+    } */
+    .nav-links{
+        width: 35%;
+      }
+}

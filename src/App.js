@@ -18,20 +18,18 @@ function App(){
 
   return (
     <ParallaxProvider>
-        <Router>
-             <div>
-               <Navbar />
-                  <Switch>
-                    <Route path="/" exact component={Home}  />
-                    <Route path="/about" component={About}  />
-                    <Route path="/spacefleet" exact   component={SpaceFleet} />
-                    <Route path="/spacefleet/:rocket_id" component={RocketTemplate} />
-                    <Route path="/careers" component={Careers}  />
-                    <Route path="/history" component={History}  />
-                  </Switch>
-                <Footer/>
-             </div>
-         </Router>
+      <Router>
+        <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home}  />
+            <Route path="/about" component={About}  />
+            <Route path="/spacefleet" exact   component={SpaceFleet} />
+            <Route path="/spacefleet/:rocket_id" component={RocketTemplate} />
+            <Route path="/careers" component={Careers}  />
+            <Route path="/history" component={History}  />
+          </Switch>
+        <Footer/>
+        </Router>
     </ParallaxProvider>
   )
 }

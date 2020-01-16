@@ -240,6 +240,11 @@ div.leaflet-control-attribution.leaflet-control{
   color: dimgray;
 }
 
+.leaflet-container{
+  position: relative;
+  z-index: 20;
+  }
+
 .leaflet-container a{
   text-decoration: none;
   color: dimgray; 
