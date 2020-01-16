@@ -74,7 +74,7 @@ a li:hover{
 }
 
 .burger{
-    padding-left: 35px;
+    padding-left: 10px;
     cursor: pointer;
 }
 
@@ -86,9 +86,9 @@ a li:hover{
 }
 
 .logo{
-    padding-right: 35px;
-    height: 35px;
-    width: 250px;
+    padding-right: 10px;
+    height: 25px;
+    width: 150px;
     -webkit-transition: filter 0.7s ease-in-out;
     -moz-transition: filter 0.7s ease-in-out;
     -ms-transition: filter 0.7s ease-in-out;
@@ -197,6 +197,16 @@ a li:hover{
         position: relative;
         background: none;
         font-size: 1.1rem;
+    }
+    .burger{
+        padding-left: 45px;
+    }
+
+    .logo{
+        padding-right: 45px;
+        height: 35px;
+        width: 250px;
+
     }
 }
  

@@ -12,10 +12,8 @@ function Home(){
                     <Parallax y={[-40, 40]} >
                         <header>
                             <div className="mainText">
-                                <h1>
-                                    <span className="first-el">MAKING LIFE</span>
-                                    <span className="second-el"> MULTI-PLANETARY</span>
-                                    </h1>
+                                    <div className="first-el">MAKING LIFE</div>
+                                    <div className="second-el"> MULTI-PLANETARY</div>
                                 </div>
                             
                             </header>

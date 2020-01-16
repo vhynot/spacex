@@ -61,6 +61,7 @@
 header{
   height: 100vh;
   position: relative;
+
 }
 
 .mainText{
@@ -68,12 +69,13 @@ header{
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 90%;
   transform: translate(-50%, -50%);
 }
 
 .first-el{
   font-family: SansProExtraLight;
-  font-size: 45px;
+  font-size: 30px;
   letter-spacing: 0.1em;
   display: flex;
   justify-content: center;
@@ -83,9 +85,10 @@ header{
 .second-el{
   display: block;
   font-family: SansProSemiBold;
-  font-size: 57px;
-  letter-spacing: 0.07em;
+  font-size: 34px;
+  letter-spacing: 0.01em;
   top:10%;
+  text-align: center;
 }
 
 
@@ -136,4 +139,48 @@ hr {
   font-size: 1.5em;
   letter-spacing: 0.2em;
   padding-right: 7%;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  .first-el{
+    font-size: 33px;
+  }
+
+  .second-el{
+    font-size: 45px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .mainText{
+    width: 60vw;
+    text-align: center;
+    }
+
+  .first-el{
+    font-size: 38px;
+  }
+
+  .second-el{
+    font-size: 50px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .first-el{
+    font-size: 45px;
+  }
+
+  .second-el{
+    font-size: 57px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
 }
