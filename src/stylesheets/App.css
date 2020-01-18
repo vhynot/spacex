@@ -29,8 +29,9 @@
   box-sizing: border-box;
   font-family: SansProRegular;
   color: white;
- 
+
 }
+
 
 
                         /* /////////////////////
@@ -45,6 +46,7 @@
   background-size: cover;
   height: auto;
   min-height: 100vh;
+  
 }
 
 
@@ -55,7 +57,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 header{
@@ -98,7 +100,8 @@ header{
 
 .section-first-home{
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
+  padding: 5vh 0 ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,13 +110,13 @@ header{
 
 .section-first {
   background: rgba(48,48,62,1);
-  position: absolute;
-  display: flex;
-  padding: 5vh 0;
+  display: block;
+  width: 100vw;
+  padding: 0 0;
 }
 
 .section-first hr {
-  margin:0 7%;
+  margin:0 20%;
   border-color: rgba(49, 51, 78, 0.712);
 }
 
@@ -122,7 +125,9 @@ hr {
 }
 
 .video-sec-first {
-  padding-left: 7%;
+  width: 90vw;
+  height: 50%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,15 +135,25 @@ hr {
 }
 
 .text-sec-first {
+  width: 90vw;
+  height: 50%;
   font-family: SansProLight;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-weight: 300;
-  font-size: 1.5em;
-  letter-spacing: 0.2em;
-  padding-right: 7%;
+  font-size: 0.95em;
+  letter-spacing: 0.1em;
+  padding: 0 7%;
+  margin: 16% auto;
+}
+
+iframe{
+  height: 60%;
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 16%;
 }
 
 
@@ -151,10 +166,33 @@ hr {
   .second-el{
     font-size: 45px;
   }
+  
+  .video-sec-first{
+    width: 70%;
+    height: 50%;
+  }
+  
+  iframe{
+    height: 70%;
+    margin: 15% auto;
+  }
+
+  .section-first hr {
+    margin: 7% 15%;
+  }
+
+  .text-sec-first {
+    height: 70%;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    padding: 0 10%;
+    margin: 10% auto;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
+@media (min-width: 768px) { 
+ 
   .mainText{
     width: 60vw;
     text-align: center;
@@ -167,6 +205,60 @@ hr {
   .second-el{
     font-size: 50px;
   }
+
+  .section-first-home{
+    position: relative;
+    min-height: 100vh;
+    max-width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 7, 0.938);
+  }
+  
+  .section-first {
+    background: rgba(48,48,62,1);
+    position: relative;
+    display: flex;
+    padding: 5vh 0;
+    height: 45%;
+    max-width:100vw;
+  }
+  
+  .section-first hr {
+    margin: 0 2%;
+    border-color: rgba(49, 51, 78, 0.712);
+  }
+  
+  .video-sec-first {
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text-sec-first {
+    width: 43%;
+    height: auto;
+    font-family: SansProLight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 3%;
+  }
+
+  iframe{
+    height: 65%;
+    width: 95%;
+    margin: 18% auto;
+ 
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -177,10 +269,36 @@ hr {
 
   .second-el{
     font-size: 57px;
+  
   }
+
+  .section-first{
+    height: auto;
+  }
+  
+  iframe{
+    height: 80%;
+    width: 90%;
+    margin: 8% auto;
+    margin-bottom: 1.5%;
+  }
+
+  .text-sec-first{
+    font-size: 1em;
+ }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
+ .text-sec-first{
+    font-size: 1.1em;
+ }
+
+ iframe{
+  height: 90%;
+  width: 100%;
+  margin: 4% auto;
+
+}
 
 }

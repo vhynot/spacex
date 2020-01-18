@@ -73,6 +73,7 @@ a li:hover{
     transition-delay: 0.4s;
 }
 
+
 .burger{
     padding-left: 10px;
     cursor: pointer;
@@ -169,10 +170,12 @@ a li:hover{
 @keyframes NavLinkFadeIn{
     from{
         opacity: 0;
+        width: 0;
         transform: translateX(150px);
     }
     to{
         opacity: 1;
+        width: 100%;
         transform: translateX(0px);
     }
 }
@@ -180,19 +183,21 @@ a li:hover{
 @keyframes NavLinkFadeOut{
     from{
         opacity: 1;
+        width: 100%;
         transform: translateX(0);
     }
     to{
         opacity: 0;
+        width: 0;
         transform: translateX(150px);
     }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
-    /* .nav-container{
+    .nav-container{
         background:green;
-    } */
+    }
     a li{
         position: relative;
         background: none;
@@ -212,9 +217,9 @@ a li:hover{
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
-    /* .nav-container{
+    .nav-container{
         background: greenyellow;
-    } */
+    }
 
     .nav-links li{
         display: flex;
@@ -287,9 +292,9 @@ a li:hover{
  
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    /* .nav-container{
+    .nav-container{
         background: purple;
-    } */
+    }
     
     .nav-links li{
         font-size: 1.1rem;
@@ -304,9 +309,9 @@ a li:hover{
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-    /* .nav-container{
+    .nav-container{
         background: hotpink;
-    } */
+    }
     .nav-links{
         width: 35%;
       }

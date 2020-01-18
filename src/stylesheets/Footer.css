@@ -29,9 +29,10 @@ align-items: center;
 
 .foot-1{
 display: flex;
-width: 42%;
+width: 48%;
 justify-content: center;
 align-items: center;
+margin:0 auto;
 }
 
 .foot-1 a{
@@ -40,11 +41,11 @@ display: flex;
 }
 
 .foot-2{
-display: flex;
-width: 42%;
-justify-content: center;
-align-items: center;
-}
+  display: block;
+  width: 48%;
+  margin: 0 auto;
+  text-align: center;
+  }
 
 .foot-2 p{
 font-family: SansProLight;
@@ -53,7 +54,8 @@ padding-right: 2%;
 
 .icons{
 display: flex;
-width: 25%;
+width: 100%;
+margin: 0 2%;
 justify-content: space-between;
 align-items: center;
 }
@@ -64,3 +66,84 @@ height: 25px;
 width:25px;
 }
                         
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+
+    
+    .foot-1{
+      margin:0 auto;
+    }
+    
+    .foot-2{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    }
+    
+    .icons{
+    display: flex;
+    width: 60%;
+    margin: 0 20%;
+    }
+    
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+
+
+  .foot-2{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .foot-2 p{
+      width: 40%;
+      text-align: center;
+      padding: 0;
+      }
+
+  .icons{
+    width: 40%;
+    margin: 0 0;
+    
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .foot-1{
+    display: flex;
+    width: 40%;
+    justify-content: start;
+    align-items: center;
+    }
+
+  .foot-2{
+    width: 50%;
+    margin: 0 0;
+    }
+
+  .icons{
+    width: 40%;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .foot-2{
+    width: 40%;
+    }
+
+    .foot-2 p{
+      width: 38%;
+      }
+
+  .icons{
+    width: 25%;
+    }
+}
