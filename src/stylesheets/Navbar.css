@@ -198,7 +198,7 @@ a li:hover{
     /* .nav-container{
         background:green;
     } */
-    
+
     a li{
         position: relative;
         background: none;
@@ -295,8 +295,8 @@ a li:hover{
 @media (min-width: 992px) { 
     /* .nav-container{
         background: purple;
-    } */
-    
+    }
+     */
     .nav-links li{
         font-size: 1.1rem;
         letter-spacing: 0.2rem;

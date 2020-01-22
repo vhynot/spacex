@@ -23,7 +23,7 @@ function Navbar() {
                      <li className={`${toggleMenu ? "nav-links-fadein-1": "nav-links-fadeout-1"}`}>ABOUT</li>
                   </Link>
                   <Link to="/spacefleet" onClick={setToggle}>
-                     <li className={`${toggleMenu ? "nav-links-fadein-2": "nav-links-fadeout-2"}`}>SPACE FLEET</li> 
+                     <li className={`${toggleMenu ? "nav-links-fadein-2": "nav-links-fadeout-2"}`}>FLEET</li> 
                   </Link>
                   <Link to="/careers" onClick={setToggle}>
                      <li className={`${toggleMenu ? "nav-links-fadein-3": "nav-links-fadeout-3"}`}>CAREERS</li> 

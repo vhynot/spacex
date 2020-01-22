@@ -29,7 +29,10 @@
   box-sizing: border-box;
   font-family: SansProRegular;
   color: white;
+}
 
+#root{
+  overflow-x: hidden;
 }
 
 
@@ -39,7 +42,7 @@
                         ///////////////////// */
 
 .homepage{
-  background: url(../img/background1234.png) no-repeat center center fixed; 
+  background: url(../img/background1234.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

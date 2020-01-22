@@ -72,7 +72,7 @@
   align-items: center;
   text-align: justify;
   margin: 0 4%;
-  padding: 4% 4%;
+  padding: 6% 6%;
 }
 
 .about-first-p{
@@ -99,7 +99,7 @@
 .second-div-layer{
   background: #0E0A12;
   margin: 0 4%;
-  padding: 8% 8%;
+  padding: 4% 4%;
 
 }
 
@@ -317,6 +317,7 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive:hover{
 
   .section-second-about-first-div{
     margin-left: 30%;
+    padding: 8% 8%;
     margin-right: 6%;
   }
 
