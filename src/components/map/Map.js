@@ -21,8 +21,8 @@ useEffect(() =>{
                     ///CREATING MAP///
 
     mapRef.current = L.map('map',{
-        center: [39, -105],
-        zoom:4,
+        center: [37, -115],
+        zoom:5,
         layers: [
             L.tileLayer.colorFilter('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
             maxZoom: 15,

@@ -1,12 +1,20 @@
 import React from 'react'
 import "../../stylesheets/RocketDetails.css"
+import svg1 from "../../img/Component1.svg"
 
 const RocketDetails = ({rocket}) => {
      console.log(rocket)
 
     return (
             <div>
-                <div className="details-card">
+                
+               <section className="rocketdetails-section-1">
+                    <div className="rocketdetails-layers" >
+                            <div className="rocketdetails-section-1-layer-1"> </div>
+                            <img className="rocketdetails-section-1-layer-2 svg-1" src={svg1} alt="svg1" />
+                    </div>
+               <div className="rocket-name"> <h3>{rocket.rocket_name}</h3></div>
+               <div className="details-card">
                     <div className="card">
                         <img className="rocket-image" src={rocket.flickr_images} alt=""/>
                     </div>
@@ -15,7 +23,11 @@ const RocketDetails = ({rocket}) => {
                         <p className="description">{rocket.description}</p>
                     </div>
                 </div>
-                <div className="details-card-2" >
+               </section>
+               
+               <section className="rocketdetails-section-2">
+               
+               <div className="details-card-2" >
                     <p className="spec2">Specification Card</p>
                     <hr />
                     <div>
@@ -60,6 +72,7 @@ const RocketDetails = ({rocket}) => {
                         </div> 
                     </div>
                 </div>
+               </section>
             </div>
     )
 }
