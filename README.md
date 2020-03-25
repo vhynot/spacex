@@ -1,6 +1,6 @@
 # SpaceXDEMO
 
-Project of company website designed as a part of practical usage of ReactJS, HTML, CSS, JS, NPM packages and fetching data through the SpaceX API.
+Project of company website designed as a part of practical usage of ReactJS, HTML, Sass according to BEM methodology, JS, NPM packages and fetching data through the SpaceX API.
 
 ### Live demo: [SpaceXDEMO](https://spacex.netlify.com/)
 ## Getting started
