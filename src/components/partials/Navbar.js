@@ -1,46 +1,38 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import '../../stylesheets/App.css';
-import '../../stylesheets/Navbar.css';
 import logo from '../../img/logo.png';
 
-
 function Navbar() {
-
    const [toggleMenu,setToggleMenu] = useState(false);
 
    const setToggle = () => setToggleMenu(!toggleMenu);
 
     return (
-         <nav className="nav-container">
-            <Link to="/">
-               <img className="logo" src={logo} alt="logo"/>
+      <nav className="navbar">
+         <Link to="/">
+            <img className="navbar__logo" src={logo} alt="logo"/>
+         </Link>
+         <ul className={`navbar__menu ${toggleMenu ? "navbar__menu--active": "navbar__menu--inactive"}`}>
+            <Link to="/about" onClick={setToggle}>
+               <li className={`${toggleMenu ? "navbar__link--fadein-1": "navbar__link--fadeout-1"}`}>ABOUT</li>
             </Link>
-            
-            <ul className={`nav-links ${toggleMenu ? "nav-active": "nav-inactive"}`}>
-               
-                  <Link to="/about" onClick={setToggle}>
-                     <li className={`${toggleMenu ? "nav-links-fadein-1": "nav-links-fadeout-1"}`}>ABOUT</li>
-                  </Link>
-                  <Link to="/spacefleet" onClick={setToggle}>
-                     <li className={`${toggleMenu ? "nav-links-fadein-2": "nav-links-fadeout-2"}`}>FLEET</li> 
-                  </Link>
-                  <Link to="/careers" onClick={setToggle}>
-                     <li className={`${toggleMenu ? "nav-links-fadein-3": "nav-links-fadeout-3"}`}>CAREERS</li> 
-                  </Link>
-                  <Link to="/history" onClick={setToggle}>
-                     <li className={`${toggleMenu ? "nav-links-fadein-4": "nav-links-fadeout-4"}`}>HISTORY</li> 
-                  </Link>
-
-            </ul>
-            
-            <div className="burger" onClick={setToggle}>
-               <div className={` ${toggleMenu ? "ham-div-1": "ham-1"}`}></div>
-               <div className={` ${toggleMenu ? "ham-div-2": "ham-2"}`}></div>
-               <div className={` ${toggleMenu ? "ham-div-3": "ham-3"}`}></div>
-            </div>
-         </nav>
-    );
+            <Link to="/fleet" onClick={setToggle}>
+               <li className={`${toggleMenu ? "navbar__link--fadein-2": "navbar__link--fadeout-2"}`}>FLEET</li>
+            </Link>
+            <Link to="/careers" onClick={setToggle}>
+               <li className={`${toggleMenu ? "navbar__link--fadein-3": "navbar__link--fadeout-3"}`}>CAREERS</li>
+            </Link>
+            <Link to="/history" onClick={setToggle}>
+               <li className={`${toggleMenu ? "navbar__link--fadein-4": "navbar__link--fadeout-4"}`}>HISTORY</li>
+            </Link>
+         </ul>
+         <div className="navbar__burger" onClick={setToggle}>
+            <div className={` ${toggleMenu ? "navbar__burger--vert-1": "navbar__burger--hor-1"}`}></div>
+            <div className={` ${toggleMenu ? "navbar__burger--vert-2": "navbar__burger--hor-2"}`}></div>
+            <div className={` ${toggleMenu ? "navbar__burger--vert-3": "navbar__burger--hor-3"}`}></div>
+         </div>
+      </nav>
+    )
 }
 
 export default Navbar;

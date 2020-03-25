@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SansProRegular;
+    color: white;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@import "./fonts&variables/fonts.scss";
+@import "./fonts&variables/variables&keyframes.scss";
+
+@import "./partials/navbar.scss";
+@import "./mediaqueries/nav-mq.scss";
+
+@import "./homepage/homepage.scss";
+@import "./mediaqueries/hp-mq.scss";
+
+@import "./about/about.scss";
+@import "./mediaqueries/ab-mq.scss";
+
+@import "./fleet/fleet.scss";
+@import "./mediaqueries/f-mq.scss";
+
+@import "./fleet/individualRocket/individualRocket.scss";
+@import "./mediaqueries/ir-mq.scss";
+
+@import "./partials/footer.scss";
+@import "./mediaqueries/foot-mq.scss";

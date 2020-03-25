@@ -1,0 +1,45 @@
+@-webkit-keyframes transitionIn {
+  from {
+    min-height: 0vh;
+  }
+  to {
+    min-height: 8vh;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    min-height: 0vh;
+  }
+  to {
+    min-height: 8vh;
+  }
+}
+
+@-webkit-keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+/*# sourceMappingURL=variables.css.map */

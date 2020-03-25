@@ -1,0 +1,126 @@
+.hp-section-title {
+  background: url(../img/background1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: auto;
+  min-height: 100vh;
+}
+
+.hp-section-title__layer {
+  background: radial-gradient(circle, rgba(48, 48, 62, 0.7) 15%, rgba(11, 11, 13, 0.6) 80%);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.hp-section-title__header {
+  height: 100vh;
+  position: relative;
+}
+
+.hp-section-title__heading-wrapper {
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hp-section-title__text-1 {
+  font-family: SansProExtraLight;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+.hp-section-title__text-2 {
+  display: block;
+  font-family: SansProSemiBold;
+  font-size: 34px;
+  letter-spacing: 0.01em;
+  top: 10%;
+  text-align: center;
+}
+
+.hp-section-main {
+  position: relative;
+  min-height: 50vh;
+  padding: 5vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 7, 0.938);
+}
+
+.hp-section-main__horizontal-rule {
+  margin: 0 20%;
+  border-color: rgba(49, 51, 78, 0.712);
+  height: auto;
+}
+
+.hp-section-main__description {
+  background: #30303e;
+  display: block;
+  width: 100vw;
+  padding: 0 0;
+}
+
+.hp-section-main__description__video {
+  width: 90vw;
+  height: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hp-section-main__description__text {
+  width: 90vw;
+  height: 50%;
+  font-family: SansProLight;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.95em;
+  letter-spacing: 0.1em;
+  padding: 0 7%;
+  margin: 16% auto;
+}
+
+iframe {
+  height: 60%;
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 16%;
+}
+/*# sourceMappingURL=homepage.css.map */

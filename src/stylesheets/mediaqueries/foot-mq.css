@@ -1,0 +1,76 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .footer {
+    font-size: 1em;
+  }
+  .footer__resources {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .footer__social {
+    display: block;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+  }
+  .footer__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .footer__resources {
+    width: 20%;
+  }
+  .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60%;
+  }
+  .footer__social__caption {
+    width: 40%;
+    text-align: center;
+    padding: 0;
+  }
+  .footer__icons {
+    width: 40%;
+    margin: 0 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .footer__resources {
+    width: 40%;
+  }
+  .footer__social {
+    width: 50%;
+    margin: 0 0;
+  }
+  .footer__icons {
+    width: 40%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .footer__social {
+    width: 40%;
+  }
+  .footer__social__caption {
+    width: 38%;
+  }
+}
+/*# sourceMappingURL=foot-mq.css.map */

@@ -1,0 +1,143 @@
+@mixin burger() {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: white;
+    border-radius: 20%;    
+}
+
+@mixin burgerAnime($transform, $transition) {
+    transform: $transform;
+    transition: $transition;
+}
+
+@mixin navlinkAnim($key, $direction, $delay) {
+    animation: $key 1.2s ease $direction $delay;
+}
+
+.navbar {
+    background: rgba(11, 11, 17, 1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    min-height: 8vh;
+    color: rgb(255 ,255 , 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__logo {
+        padding-right: 10px;
+        height: 25px;
+        width: 150px;
+        transition: filter 0.7s ease-in-out;
+        &:hover {
+            filter: drop-shadow(3px 3px 3px  rgba(255, 255, 255, 0.5));
+        }
+    }
+    &__menu {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        z-index:10000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        height: 92vh;
+        width: 50vw;
+        background: rgba(11, 11, 17, 0.8);
+        transform: translate(100%);
+        transition: 0.5s ease-in;
+        &--active {
+            transform: translateX(0);
+        }
+        &--inactive {
+            transform: translateX(100%);
+            transition-delay: 0.4s;
+        }
+        a {
+            text-decoration: none;
+            height: 25%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                color: white;
+                list-style: none;
+                font-size: 1.1rem;
+                letter-spacing: 0.05rem;
+                opacity: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                &:hover {
+                    background: rgba(142, 147, 172, 0.3);
+                    font-size: 1.2em;
+                }   
+            }
+        }
+    }
+    &__link {
+        &--fadein-1 {
+            @include navlinkAnim(NavLinkFadeIn, backwards, 0s);
+        }
+        &--fadein-2 {
+            @include navlinkAnim(NavLinkFadeIn, backwards, 0.1s);
+        }
+        &--fadein-3 {
+            @include navlinkAnim(NavLinkFadeIn, backwards, 0.2s);
+        }
+        &--fadein-4 {
+            @include navlinkAnim(NavLinkFadeIn, backwards, 0.3s);
+        }
+        &--fadeout-1 {
+            @include navlinkAnim(NavLinkFadeOut, forwards, 0s);
+        }
+        &--fadeout-2 {
+            @include navlinkAnim(NavLinkFadeOut, forwards, 0.1s);
+        }
+        &--fadeout-3 {
+            @include navlinkAnim(NavLinkFadeOut, forwards, 0.2s);
+        }
+        &--fadeout-4 {
+            @include navlinkAnim(NavLinkFadeOut, forwards, 0.3s);
+        }
+    }
+    &__burger {
+        padding-left: 10px;
+        cursor: pointer;
+        div {
+            @include burger();
+        }
+        &--hor-1{
+            transform: none;
+            transition: 0.2s;
+        }
+        &--hor-2{
+            transform: none;
+            transition: 0.1s;
+        }
+        &--hor-3{
+            transform: none;
+            transition: 0.2s;
+        }
+        &--vert-1 {
+            transform: rotate(-90deg) translate( -6px, 8px);
+            transition: 0.2s;
+        }
+        &--vert-2 {
+            transform: rotate(-90deg) translate(-2px, 0px);
+            transition: 0.1s;
+        }
+        &--vert-3 {
+            transform: rotate(-90deg) translate( 10px, -8px);
+            transition: 0.2s;
+        }
+    }
+}
