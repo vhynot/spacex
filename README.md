@@ -2,7 +2,7 @@
 
 Project of company website designed as a part of practical usage of ReactJS, HTML, Sass according to BEM methodology, JS, NPM packages and fetching data through the SpaceX API.
 
-### Live demo: [SpaceXDEMO](https://spacex.netlify.com/)
+### Live demo: [SpaceXDEMO](https://vhynot.netlify.com/)
 ## Getting started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
