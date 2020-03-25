@@ -1,13 +1,10 @@
 import React from 'react';
-import '../../stylesheets/Careers.css';
 
-function Careers(){
+function Careers() {
     return (
-      <div>
-            <div className="section-first-careers">
-            </div>
+      <div className="section-first-careers">
       </div>
-    );
+    )
 }
 
 export default Careers;

@@ -1,0 +1,213 @@
+.about-section-1 {
+  font-family: SansProBold;
+  letter-spacing: 0.3em;
+  font-size: 1.2em;
+  background: url(../img/Moon_rocket.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about-section-1__text {
+  text-shadow: 1.4px 1.4px #da4078;
+}
+
+.about-section-2 {
+  font-size: 0.7em;
+  background: rgba(0, 0, 7, 0.938);
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  padding-top: 6%;
+}
+
+.about-section-2__article-1-wrapper {
+  background: #082346;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  margin: 0 4%;
+  padding: 6% 6%;
+}
+
+.about-section-2__article-1 {
+  font-family: SansProLight;
+  font-size: 1.4em;
+  line-height: 1.35em;
+  letter-spacing: 0.09em;
+  color: #d6daef;
+  position: relative;
+}
+
+.about-section-2__article-2-wrapper {
+  background: #082346;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  min-height: 33.3%;
+  margin: 0 4%;
+  padding: 0 4%;
+  padding-top: 4%;
+}
+
+.about-section-2__article-2-layer-2 {
+  background: #113457;
+  margin: 0 4%;
+  padding: 4% 4%;
+}
+
+.about-section-2__article-2 {
+  font-family: SansProLight;
+  font-size: 1.4em;
+  line-height: 1.35em;
+  letter-spacing: 0.09em;
+  color: #d6daef;
+  position: relative;
+}
+
+.about-section-2__article-3-wrapper {
+  background: #082346;
+  position: relative;
+  min-height: 33%;
+  margin: 0 4%;
+  padding: 0 4%;
+}
+
+.about-section-2__article-3-layer-2 {
+  background: #113457;
+  height: 100%;
+  margin: 0 4%;
+  padding: 0 8%;
+  padding-top: 8%;
+}
+
+.about-section-2__article-3-layer-3 {
+  background: #345678;
+  opacity: 0.8;
+  height: 100%;
+  margin: 0 4%;
+  padding: 8% 8%;
+}
+
+.about-section-2__article-3-about-us {
+  display: block;
+  text-align: center;
+  height: 50%;
+  padding: 16% 4%;
+  background: #234567;
+  margin-bottom: 16%;
+}
+
+.about-section-2__about-us {
+  margin: 6% 2%;
+}
+
+.about-section-2__about-us__details-1 {
+  font-family: SansProLight;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.about-section-2__about-us__details-2 {
+  font-family: SansProBold;
+  text-shadow: 0.4px 0.4px #da4078;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.about-section-2__article-3-office {
+  display: block;
+  height: 50%;
+  padding: 16% 4%;
+  margin-top: 16%;
+  background: #234567;
+}
+
+.about-section-2__office {
+  display: block;
+  text-align: center;
+}
+
+.about-section-2__office__details-1 {
+  font-family: SansProBold;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0.5px 0.5px #da4078;
+  display: block;
+}
+
+.about-section-2__office__details-2 {
+  font-family: SansProLight;
+  font-size: 1.1em;
+  letter-spacing: 0.12em;
+  display: block;
+}
+
+.about-section-3 {
+  background: #101017;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 75%;
+}
+
+#map {
+  margin: 10vh 0;
+  min-width: 80%;
+  height: 50vh;
+}
+
+div.leaflet-popup-content-wrapper {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background: #696969;
+  color: black;
+}
+
+div.leaflet-popup-tip {
+  background: #696969;
+}
+
+div.leaflet-control-attribution.leaflet-control {
+  background: none;
+  color: dimgray;
+}
+
+.leaflet-interactive {
+  opacity: 0.5;
+}
+
+.leaflet-interactive:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=about.css.map */

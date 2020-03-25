@@ -1,0 +1,43 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .rocket-details-container {
+    font-size: 0.9em;
+  }
+  .rocket-details__section-2 {
+    width: 70%;
+    margin: 15%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .rocket-details__section-1__details-card-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85%;
+    margin: 2% 7.5%;
+  }
+  .rocket-details__section-2 {
+    width: 50%;
+    margin: 10% 25%;
+  }
+  .rocket-details__section-2__header {
+    margin-top: 1%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .rocket-details {
+    font-size: 1em;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .rocket-details {
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=ir-mq.css.map */

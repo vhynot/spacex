@@ -1,0 +1,96 @@
+@-webkit-keyframes transitionIn {
+  from {
+    min-height: 0vh;
+  }
+  to {
+    min-height: 8vh;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    min-height: 0vh;
+  }
+  to {
+    min-height: 8vh;
+  }
+}
+
+@-webkit-keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes NavLinkFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes NavLinkFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes NavLinkFadeOut {
+  from {
+    opacity: 1;
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    width: 0;
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+}
+
+@keyframes NavLinkFadeOut {
+  from {
+    opacity: 1;
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    width: 0;
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+}
+/*# sourceMappingURL=variables&keyframes.css.map */

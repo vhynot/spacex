@@ -1,0 +1,43 @@
+@mixin flex($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+.footer {
+    background: rgba(11, 11, 17, 1);
+    @include flex(space-between);
+    font-size: 0.7em;
+    min-height: 7vh;
+    &__resources {
+        display: block;
+        width: 35%;
+        margin:0 auto;
+        &__link {
+            display: flex;
+            font-family: SansProExtraLight;
+            text-decoration: none;
+        }
+    }
+    &__social {
+        display: block;
+        text-align: center;
+        width: 48%;
+        margin: 0 auto;
+        &__caption {
+            font-family: SansProLight;
+            padding-top: 4%;
+        }
+    }
+    &__icons {
+        @include flex(space-between);
+        width: 100%;
+        margin: 0 auto;
+        padding: 4%;
+        &__icon {
+            display: flex;
+            height: 25px;
+            width:25px;
+        }
+    }
+}
