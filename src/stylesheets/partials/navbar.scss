@@ -16,8 +16,8 @@
 }
 
 .navbar {
-    background: rgba(11, 11, 17, 1);
-    position: sticky;
+    background: rgba(11, 11, 17, 0.6);
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
@@ -33,7 +33,7 @@
         width: 150px;
         transition: filter 0.7s ease-in-out;
         &:hover {
-            filter: drop-shadow(3px 3px 3px  rgba(255, 255, 255, 0.5));
+            filter: drop-shadow(3px 3px 3px  rgba(255, 255, 255, 0.6));
         }
     }
     &__menu {
@@ -48,7 +48,7 @@
         justify-content: space-around;
         height: 92vh;
         width: 50vw;
-        background: rgba(11, 11, 17, 0.8);
+        background: rgba(11, 11, 17, 0.5);
         transform: translate(100%);
         transition: 0.5s ease-in;
         &--active {

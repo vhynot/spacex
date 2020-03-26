@@ -52,7 +52,7 @@
     min-height: 50vh;
     padding: 5vh 0;
     @include flex();
-    background: rgba(0, 0, 7, 0.938);
+    background: rgb(23, 23, 38);
     &__horizontal-rule {
         margin:0 20%;
         border-color: rgba(49, 51, 78, 0.712);

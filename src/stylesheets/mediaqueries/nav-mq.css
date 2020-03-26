@@ -67,7 +67,7 @@
     font-size: 1.1rem;
   }
   .navbar a li:hover {
-    background: #0b0b11;
+    background: none;
     font-size: 1.1rem;
   }
   .navbar a li:hover:before {

@@ -1,7 +1,6 @@
 .navbar {
-  background: #0b0b11;
-  position: -webkit-sticky;
-  position: sticky;
+  background: rgba(11, 11, 17, 0.6);
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
@@ -29,8 +28,8 @@
 }
 
 .navbar__logo:hover {
-  -webkit-filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.5));
-          filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.5));
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.6));
+          filter: drop-shadow(3px 3px 3px rgba(255, 255, 255, 0.6));
 }
 
 .navbar__menu {
@@ -55,7 +54,7 @@
       justify-content: space-around;
   height: 92vh;
   width: 50vw;
-  background: rgba(11, 11, 17, 0.8);
+  background: rgba(11, 11, 17, 0.5);
   -webkit-transform: translate(100%);
           transform: translate(100%);
   -webkit-transition: 0.5s ease-in;
