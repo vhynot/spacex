@@ -25,6 +25,10 @@
   display: flex;
   font-family: SansProExtraLight;
   text-decoration: none;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer__social {

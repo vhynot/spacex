@@ -6,11 +6,11 @@
     color: white;
 }
 
-#root {
-    overflow-x: hidden;
+#root{
+  background-color: rgba(0,0,7,.938);
 }
 
-body {
+#root, body {
   overflow-x: hidden;
 }
 
@@ -31,6 +31,9 @@ body {
 
 @import "./fleet/individualRocket/individualRocket.scss";
 @import "./mediaqueries/ir-mq.scss";
+
+@import "./careers/careers.scss";
+@import "./mediaqueries/careers-mq.scss";
 
 @import "./partials/footer.scss";
 @import "./mediaqueries/foot-mq.scss";

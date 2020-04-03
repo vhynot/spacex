@@ -8,10 +8,10 @@
 }
 
 #root {
-  overflow-x: hidden;
+  background-color: rgba(0, 0, 7, 0.938);
 }
 
-body {
+#root, body {
   overflow-x: hidden;
 }
 
@@ -755,7 +755,7 @@ iframe {
 
 .about-section-2 {
   font-size: 0.7em;
-  background: rgba(0, 0, 7, 0.938);
+  background: #101017;
   position: relative;
   width: 100%;
   min-height: 150vh;
@@ -910,7 +910,7 @@ iframe {
 
 #map {
   margin: 10vh 0;
-  min-width: 80%;
+  min-width: 74%;
   height: 50vh;
 }
 
@@ -1144,7 +1144,6 @@ div.leaflet-control-attribution.leaflet-control {
 @media (min-width: 768px) {
   .rocket-wrapper {
     background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-    min-height: 92vh;
     max-width: 100vw;
     display: -ms-grid;
     display: grid;
@@ -1676,6 +1675,116 @@ div.leaflet-control-attribution.leaflet-control {
   }
 }
 
+.careers-section-1 {
+  background: url(../img/joinus.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.careers-section-1::before {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 10%;
+  height: 90%;
+}
+
+.careers-section-1__title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.careers-section-1__title-1 {
+  position: absolute;
+  font-size: 55px;
+  font-family: SansProBold;
+  letter-spacing: 0.1em;
+}
+
+.careers-section-2 {
+  background-color: #101017;
+  height: 105vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.careers-section-2::before, .careers-section-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #49467657;
+  -webkit-animation: squares 120s linear infinite;
+          animation: squares 120s linear infinite;
+  top: 0;
+  z-index: 5;
+}
+
+.careers-section-2::after {
+  animation-direction: reverse;
+  background: rgba(46, 86, 118, 0.308);
+}
+
+.careers-section-2__polygon {
+  overflow: visible;
+  width: 100vw;
+  display: block;
+  height: 15vh;
+  position: relative;
+  z-index: 6;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  bottom: -72%;
+}
+
+@-webkit-keyframes squares {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes squares {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .footer {
   background: #0b0b11;
   display: -webkit-box;
@@ -1703,6 +1812,10 @@ div.leaflet-control-attribution.leaflet-control {
   display: flex;
   font-family: SansProExtraLight;
   text-decoration: none;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer__social {

@@ -1,0 +1,55 @@
+.careers-section-1 {
+  background-color: lightcoral;
+  height: 60vh;
+  position: relative;
+}
+
+.careers-section-2 {
+  background-color: black;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.careers-section-2::before, .careers-section-2::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #49467657;
+  -webkit-animation: squares 120s linear infinite;
+          animation: squares 120s linear infinite;
+  top: 0;
+}
+
+.careers-section-2::after {
+  animation-direction: reverse;
+  background: rgba(46, 86, 118, 0.308);
+}
+
+@-webkit-keyframes squares {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes squares {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=careers.css.map */

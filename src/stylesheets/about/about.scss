@@ -1,13 +1,8 @@
-
-
 .about-section-1 {
     font-family: SansProBold;
     letter-spacing: 0.3em;
     font-size: 1.2em;
     background: url(../img/Moon_rocket.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     width: 100%;
     min-height: 52vh;
@@ -22,7 +17,7 @@
 
 .about-section-2 {
     font-size: 0.7em;
-    background: rgba(0, 0, 7, 0.938);
+    background: $fifth;
     position: relative;
     width: 100%;
     min-height: 150vh;
@@ -155,7 +150,7 @@
 
 #map {
     margin: 10vh 0;
-    min-width:80%;
+    min-width: 74%;
     height: 50vh;
 }
   
