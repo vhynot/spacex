@@ -7,10 +7,11 @@ import Homepage from "./components/routes/Homepage";
 import About from "./components/routes/about/About";
 import Fleet from "./components/routes/fleet/Fleet";
 import RocketDetails from "./components/routes/fleet/rocketdetails/RocketDetails";
-import Careers from "./components/routes/Careers";
+import Careers from "./components/routes/careers/Careers";
 import History from "./components/routes/History";
 import {ParallaxProvider} from 'react-scroll-parallax';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import ScrollToTop from "./components/window-component/ScrollToTop"
 
 
 function App(){
@@ -18,6 +19,7 @@ function App(){
   return (
     <ParallaxProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
           <Switch>
             <Route path="/" exact component={Homepage}  />

@@ -24,9 +24,19 @@
     }
     &__title-1 {
         position: absolute;
+        font-size: 30px;
+        font-family: SansProLight;
+        letter-spacing: 0.05em ;
+        top: 43%;
+        animation: title-anim-1 3s ease;
+    }
+    &__title-2 {
+        position: absolute;
         font-size: 55px;
         font-family: SansProBold;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.1em ;
+        top: 48%;
+        animation: title-anim-2 3s ease;
     }
 }
 
@@ -50,6 +60,14 @@
         animation-direction: reverse;
         background:rgba(46, 86, 118, 0.308);
     }
+    &__form {
+        display: flex;
+        position: relative;
+        z-index: 6;
+        justify-content: center;
+        align-items: center;
+        height: 72%;
+    }
     &__polygon {
         overflow: visible;
         width: 100vw;
@@ -60,9 +78,13 @@
     }
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .rotate {
     transform: rotate(180deg);
-    bottom: -72%;
 }
 
 @keyframes squares{
@@ -71,5 +93,37 @@
     }
     100%{
         transform:rotate(360deg);
+    }
+}
+
+@keyframes title-anim-1{
+    0% {
+        opacity: 0;
+        top: 48%;
+        font-size: 45px;
+        letter-spacing: 0.1em;
+    }
+    80% {
+        opacity: 1;
+        top: 48%;
+        font-size: 45px;
+        letter-spacing: 0.1em;
+
+    }
+    100%{
+        top: 43%;
+        font-size: 30px;
+        letter-spacing: 0.05em;
+    }
+}
+@keyframes title-anim-2{
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

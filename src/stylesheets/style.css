@@ -1718,9 +1718,22 @@ div.leaflet-control-attribution.leaflet-control {
 
 .careers-section-1__title-1 {
   position: absolute;
+  font-size: 30px;
+  font-family: SansProLight;
+  letter-spacing: 0.05em;
+  top: 43%;
+  -webkit-animation: title-anim-1 3s ease;
+          animation: title-anim-1 3s ease;
+}
+
+.careers-section-1__title-2 {
+  position: absolute;
   font-size: 55px;
   font-family: SansProBold;
   letter-spacing: 0.1em;
+  top: 48%;
+  -webkit-animation: title-anim-2 3s ease;
+          animation: title-anim-2 3s ease;
 }
 
 .careers-section-2 {
@@ -1748,6 +1761,21 @@ div.leaflet-control-attribution.leaflet-control {
   background: rgba(46, 86, 118, 0.308);
 }
 
+.careers-section-2__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 6;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 72%;
+}
+
 .careers-section-2__polygon {
   overflow: visible;
   width: 100vw;
@@ -1757,10 +1785,19 @@ div.leaflet-control-attribution.leaflet-control {
   z-index: 6;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  bottom: -72%;
 }
 
 @-webkit-keyframes squares {
@@ -1782,6 +1819,70 @@ div.leaflet-control-attribution.leaflet-control {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes title-anim-1 {
+  0% {
+    opacity: 0;
+    top: 48%;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+  }
+  80% {
+    opacity: 1;
+    top: 48%;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+  }
+  100% {
+    top: 43%;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@keyframes title-anim-1 {
+  0% {
+    opacity: 0;
+    top: 48%;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+  }
+  80% {
+    opacity: 1;
+    top: 48%;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+  }
+  100% {
+    top: 43%;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@-webkit-keyframes title-anim-2 {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes title-anim-2 {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
