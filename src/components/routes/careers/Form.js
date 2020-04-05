@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage} from 'formik';
+import { Formik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 
   // And now we can use these
@@ -39,40 +39,92 @@ import * as Yup from 'yup';
             }, 400);
           }}
         >
-          <Form>
-            <Field
-              label="First Name"
-              name="firstName"
-              type="text"
-            /> 
-            <ErrorMessage name="firstName"/>
-            <Field
-              label="Last Name"
-              name="lastName"
-              type="text"
-            /> 
-            <ErrorMessage name="lastName"/>
-            <Field
-              label="Email Address"
-              name="email"
-              type="email"
-            /> 
-            <ErrorMessage name="email"/>
-            <select label="Job Type" name="jobType">
-              <option value="">Select a job type</option>
-              <option value="designer">Designer</option>
-              <option value="developer">Developer</option>
-              <option value="product">Product Manager</option>
-              <option value="other">Other</option>
-            </select>
-            <ErrorMessage name="jobType"/>
-            <input 
-                name="acceptedTerms"
-                type="checkbox"/>
-                I accept the terms and conditions
-            <ErrorMessage name="acceptedTerms"/>
-            <button type="submit">Submit</button>
-          </Form>
+         {({errors, touched}) => ( 
+          <Form
+            className="form"
+            autoComplete="nope">
+            <div className="form__input-wrapper">
+              <Field  
+                className="form__input"
+                label="First Name"
+                name="firstName"
+                type="text"
+                autoComplete="nope"
+              /> 
+              <label 
+                htmlFor="firstName"
+                className="form__label">
+                <span className="form__first-name">First Name</span>
+              </label>
+            </div>
+            {touched.firstName && errors.firstName ? (
+              <div className="form__error">{errors.firstName}</div>
+            ) : <div className="form__error"></div>}
+            <div className="form__input-wrapper">
+              <Field
+                className="form__input"
+                label="Last Name"
+                name="lastName"
+                type="text"
+                autoComplete="nope"
+                />
+              <label 
+                htmlFor="lastName"
+                className="form__label">
+                <span className="form__last-name">Last Name</span>
+              </label>
+            </div>
+            {touched.lastName && errors.lastName ? (
+              <div className="form__error">{errors.lastName}</div>
+            ) : <div className="form__error"></div>} 
+            <div className="form__input-wrapper">
+              <Field
+                className="form__input"
+                label="Email Address"
+                name="email"
+                type="email"
+                /> 
+              <label 
+                htmlFor="emial"
+                className="form__label">
+                <span className="form__emial">Email</span>
+              </label>
+            </div>
+              {touched.email && errors.email ? (
+                <div className="form__error">{errors.email}</div>
+              ) : <div className="form__error"></div>} 
+              <select 
+                className="form__select"
+                label="Job Type" 
+                name="jobType">
+                <option value="">Select a job type</option>
+                <option value="designer">Designer</option>
+                <option value="developer">Developer</option>
+                <option value="product">Product Manager</option>
+                <option value="other">Other</option>
+              </select>
+              {touched.jobType && errors.jobType ? (
+                <div className="form__error">{errors.jobType}</div>
+              ) : <div className="form__error"></div>} 
+              <div className="form__checkbox-wrapper">
+                <input 
+                  className="form__checkbox"
+                  name="acceptedTerms"
+                  type="checkbox"/>
+                <p className="form__text">
+                  I accept the terms and conditions
+                </p>
+              </div>
+              {touched.acceptedTerms && errors.acceptedTerms ? (
+                <div className="form__error">{errors.acceptedTerms}</div>
+              ) : <div className="form__error"></div>} 
+              <button 
+                className="form__button"
+                type="submit">
+                  Submit
+              </button>
+            </Form>
+         )}
         </Formik>
     );
   };
