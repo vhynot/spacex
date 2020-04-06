@@ -1,0 +1,84 @@
+
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) {  
+    .careers-section-1 {
+        &__title-1 {
+            font-size: 30px;
+            animation: title-anim-1-mq 2s ease;
+        }
+        &__title-2 {
+            font-size: 45px;
+            animation: title-anim-2-mq 2s ease;
+        }
+    }
+    .form {
+        font-size: 18px;
+        width: 70%;
+        &__error {
+            height: 6%;
+            font-size: 16px;
+        }
+        &__text {
+            margin-left: 40px;
+            font-size: 1em;
+        }
+    }
+
+  }
+
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    .form {
+        width: 60%;
+        height: 85%;
+    }
+
+
+}
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .form {
+        width: 50%;
+        height: 75%;
+    }
+  }
+
+
+
+@keyframes title-anim-1-mq{
+    0% {
+        opacity: 0;
+        top: 48%;
+        font-size: 45px;
+        letter-spacing: 0.1em;
+    }
+    60% {
+        opacity: 1;
+        top: 48%;
+        font-size: 45px;
+        letter-spacing: 0.1em;
+
+    }
+    100%{
+        top: 43%;
+        font-size: 30px;
+        letter-spacing: 0.05em;
+    }
+}
+@keyframes title-anim-2-mq{
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

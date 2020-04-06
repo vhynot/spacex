@@ -1,5 +1,6 @@
 .careers-section-1 {
   background: url(../img/joinus.jpg) no-repeat center center;
+  background-position-x: 70%;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -37,26 +38,28 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50vh;
+  width: 100vw;
 }
 
 .careers-section-1__title-1 {
   position: absolute;
-  font-size: 30px;
+  font-size: 22px;
   font-family: SansProLight;
   letter-spacing: 0.05em;
   top: 43%;
-  -webkit-animation: title-anim-1 3s ease;
-          animation: title-anim-1 3s ease;
+  -webkit-animation: title-anim-1 2s ease;
+          animation: title-anim-1 2s ease;
 }
 
 .careers-section-1__title-2 {
   position: absolute;
-  font-size: 55px;
+  font-size: 45px;
   font-family: SansProBold;
   letter-spacing: 0.1em;
   top: 48%;
-  -webkit-animation: title-anim-2 3s ease;
-          animation: title-anim-2 3s ease;
+  -webkit-animation: title-anim-2 2s ease;
+          animation: title-anim-2 2s ease;
 }
 
 .careers-section-2 {
@@ -109,8 +112,8 @@
 }
 
 .form {
-  width: 50%;
-  height: 70%;
+  width: 75%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,37 +126,130 @@
   font-size: 16px;
 }
 
+.form input {
+  outline: none;
+}
+
+.form input:focus + .form__label::after, .form input:valid + .form__label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.form input:focus + .form__label .form__label__text, .form input:valid + .form__label .form__label__text {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 14px;
+  color: #00aaff;
+}
+
 .form__error {
-  height: 6%;
+  height: 4%;
+  font-size: 10px;
   color: red;
 }
 
 .form select {
   background: none;
   border-radius: 3px;
+  padding-left: 8px;
   height: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../img/arrow.png) no-repeat center;
+  background-position: 99% 65%;
 }
 
 .form__checkbox-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 20px;
+  position: relative;
+  padding-left: 1%;
 }
 
-.form__checkbox {
-  margin-top: 4px;
+.form__checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  top: 13%;
+  z-index: 10;
+}
+
+.form__checkbox-wrapper input:checked ~ .form__checkbox-style {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+.form__checkbox-wrapper input:checked ~ .form__checkbox-style::after {
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 3px;
+  top: 1px;
+  width: 3px;
+  height: 5px;
+  border: solid #101017;
+  border-width: 0px 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.form__checkbox-style {
+  position: absolute;
+  top: 3px;
+  bottom: 0px;
+  height: 15px;
+  width: 15px;
+  border-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.form__checkbox-style::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+          transform: rotate(0deg) scale(0);
+  opacity: 1;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .form__text {
-  margin-left: 20px;
+  margin-left: 25px;
+  font-size: 0.9em;
 }
 
 .form__button {
-  background: #00aaff;
+  background: #00aaffde;
   color: white;
   border: none;
   height: 50px;
   border-radius: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background: #00aaff;
 }
 
 .rotate {
@@ -183,6 +279,50 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.form__label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #00aaff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form__label__text {
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+select option {
+  color: #fff;
+  background: #27324a;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #27324a inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @-webkit-keyframes squares {
@@ -211,18 +351,18 @@
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 45px;
+    font-size: 30px;
     letter-spacing: 0.1em;
   }
-  80% {
+  60% {
     opacity: 1;
     top: 48%;
-    font-size: 45px;
+    font-size: 30px;
     letter-spacing: 0.1em;
   }
   100% {
     top: 43%;
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 0.05em;
   }
 }
@@ -231,18 +371,18 @@
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 45px;
+    font-size: 30px;
     letter-spacing: 0.1em;
   }
-  80% {
+  60% {
     opacity: 1;
     top: 48%;
-    font-size: 45px;
+    font-size: 30px;
     letter-spacing: 0.1em;
   }
   100% {
     top: 43%;
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 0.05em;
   }
 }
@@ -251,7 +391,7 @@
   0% {
     opacity: 0;
   }
-  80% {
+  60% {
     opacity: 0;
   }
   100% {
@@ -263,7 +403,7 @@
   0% {
     opacity: 0;
   }
-  80% {
+  60% {
     opacity: 0;
   }
   100% {
