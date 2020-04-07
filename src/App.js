@@ -8,7 +8,7 @@ import About from "./components/routes/about/About";
 import Fleet from "./components/routes/fleet/Fleet";
 import RocketDetails from "./components/routes/fleet/rocketdetails/RocketDetails";
 import Careers from "./components/routes/careers/Careers";
-import History from "./components/routes/History";
+import History from "./components/routes/history/History";
 import {ParallaxProvider} from 'react-scroll-parallax';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ScrollToTop from "./components/window-component/ScrollToTop"

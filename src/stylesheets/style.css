@@ -912,6 +912,7 @@ iframe {
   margin: 10vh 0;
   min-width: 74%;
   height: 50vh;
+  z-index: 10;
 }
 
 div.leaflet-popup-content-wrapper {
@@ -2193,6 +2194,102 @@ select:-webkit-autofill:focus {
   100% {
     opacity: 1;
   }
+}
+
+.history__container {
+  position: relative;
+  padding-top: 10vh;
+  min-height: 100vh;
+  margin: 0 10%;
+  background: #101016;
+}
+
+.history__container:before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 1px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
+  background: linear-gradient(to top, #fff, #fff, rgba(10, 10, 10, 0));
+  left: 50%;
+}
+
+.history__container:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  width: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
+  background: linear-gradient(to bottom, #fff, #fff, rgba(10, 10, 10, 0));
+  left: 50%;
+}
+
+.history__timeline {
+  padding: 7vh 15px;
+  margin: 0 auto;
+}
+
+.history__date {
+  font-family: SansProLight;
+  position: absolute;
+  top: 1%;
+  background: #082346;
+  padding: 10px;
+  right: 0;
+}
+
+.history__moment {
+  position: relative;
+  width: 45%;
+  padding: 30px;
+  margin-bottom: 70px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
+}
+
+.history__moment:nth-of-type(even) {
+  margin-left: auto;
+  text-align: end;
+}
+
+.history__moment:nth-of-type(even) .history__date {
+  left: 0;
+  right: auto;
+}
+
+.history__moment:nth-of-type(even) .history__title {
+  padding-left: 16%;
+  padding-right: 0;
+}
+
+.history__title {
+  font-family: SansProBold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding-right: 16%;
+  padding-left: 0;
+}
+
+.history__details {
+  font-family: SansProLight;
+  margin-top: 10px;
+}
+
+.history__link {
+  background: #da4078;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 25px;
+  display: inline-block;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer {

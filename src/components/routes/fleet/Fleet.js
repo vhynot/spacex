@@ -7,11 +7,11 @@ function Fleet() {
   const [fetched, setFetched] = useState(false);
 
   const fetchItem = async () => {
-    const data = await fetch('https://api.spacexdata.com/v3/rockets');
     setIsLoading(true);
-    setFetched(true);
+    const data = await fetch('https://api.spacexdata.com/v3/rockets');
     const items = await data.json();
     setItems(items);
+    setFetched(true);
     setIsLoading(false);
   }
   
@@ -19,14 +19,11 @@ function Fleet() {
     fetchItem();
   }, [])
 
-  const spreadRockets = items.map(rocket => { 
-      return (
+  const spreadRockets = items.map(rocket =>
         <FleetRocket  key={rocket.id} 
                       item={rocket} 
                       lodaing={isLoading}
                       fetched={fetched}/>
-      )
-    }
   )
   return (
     <div className="rocket-wrapper">
