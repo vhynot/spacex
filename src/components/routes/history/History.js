@@ -5,6 +5,7 @@ function History() {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
+  const [scrollHeight, setScrollHeight] = useState(window.scrollY);
 
   const url = "history";
 
@@ -15,18 +16,33 @@ function History() {
     setItems(items);
     setFetched(true);
     setIsLoading(false);
-    console.log(items)
+  }
+
+  const handleScroll = () => {
+    setScrollHeight(window.scrollY)
   }
 
   useEffect(() => {
     fetchItem(url);
   }, [])
 
-  const spreadItem = items.map(i => <HistoricalEvent  item={i} key={i.id}/>)
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[scrollHeight])
+
+  const spreadItem = items.map(i => <HistoricalEvent  
+                                        item={i}
+                                        key={i.id}
+                                        loading={isLoading}
+                                        fetched={fetched}
+                                        scrollHeight={scrollHeight}/>)
 
   return (
     <section className="history__container">
-      <div className="history__timeline">
+      <div className={`history__timeline ${(fetched && !isLoading) && "history__timeline--appear"}`}>
         {spreadItem} 
       </div>
     </section>

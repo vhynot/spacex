@@ -30,10 +30,10 @@ $sixth: #00aaff;
     }
     &__title-1 {
         position: absolute;
-        font-size: 22px;
+        font-size: 30px;
         font-family: SansProLight;
         letter-spacing: 0.05em ;
-        top: 43%;
+        top: 41%;
         animation: title-anim-1 2s ease;
     }
     &__title-2 {
@@ -282,20 +282,14 @@ select:-webkit-autofill:focus {
     0% {
         opacity: 0;
         top: 48%;
-        font-size: 30px;
-        letter-spacing: 0.1em;
     }
     60% {
         opacity: 1;
         top: 48%;
-        font-size: 30px;
-        letter-spacing: 0.1em;
 
     }
     100%{
-        top: 43%;
-        font-size: 22px;
-        letter-spacing: 0.05em;
+        top: 41%;
     }
 }
 @keyframes title-anim-2{

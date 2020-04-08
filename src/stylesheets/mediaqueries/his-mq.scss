@@ -1,0 +1,64 @@
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    .history {
+        &__title {
+            padding-right: 35%;
+            margin-top: 15px;
+
+        }
+        &__moment {
+            width: 90%;
+        }
+    }
+}
+
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    .history {
+        &__title {
+            padding-right: 5%;
+        }
+        &__moment {
+            width: 45%;
+            &:nth-of-type(even) {
+                margin-left: auto;
+                text-align: end;
+                .history__date {
+                    left: 0;
+                    right: auto;
+                    &::after {
+                        right: 0;
+                        left: -8%;
+                    }
+                }
+                .history__title {
+                    padding-left: 10%;
+                    padding-right: 0;
+                }
+            }
+        }
+        &__timeline {
+            padding: 7vh 0;
+            margin: 0 10%;
+            &::before, &::after {
+                left: 50%;
+            }
+        }
+    }
+}
+  
+  /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .history {
+        margin: 0 10%;
+        &__timeline {
+            font-size: 1.1em;
+        }
+    }
+}

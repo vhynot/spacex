@@ -1722,10 +1722,10 @@ div.leaflet-control-attribution.leaflet-control {
 
 .careers-section-1__title-1 {
   position: absolute;
-  font-size: 22px;
+  font-size: 30px;
   font-family: SansProLight;
   letter-spacing: 0.05em;
-  top: 43%;
+  top: 41%;
   -webkit-animation: title-anim-1 2s ease;
           animation: title-anim-1 2s ease;
 }
@@ -2029,19 +2029,13 @@ select:-webkit-autofill:focus {
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 30px;
-    letter-spacing: 0.1em;
   }
   60% {
     opacity: 1;
     top: 48%;
-    font-size: 30px;
-    letter-spacing: 0.1em;
   }
   100% {
-    top: 43%;
-    font-size: 22px;
-    letter-spacing: 0.05em;
+    top: 41%;
   }
 }
 
@@ -2049,19 +2043,13 @@ select:-webkit-autofill:focus {
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 30px;
-    letter-spacing: 0.1em;
   }
   60% {
     opacity: 1;
     top: 48%;
-    font-size: 30px;
-    letter-spacing: 0.1em;
   }
   100% {
-    top: 43%;
-    font-size: 22px;
-    letter-spacing: 0.05em;
+    top: 41%;
   }
 }
 
@@ -2092,12 +2080,12 @@ select:-webkit-autofill:focus {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .careers-section-1__title-1 {
-    font-size: 30px;
+    font-size: 45px;
     -webkit-animation: title-anim-1-mq 2s ease;
             animation: title-anim-1-mq 2s ease;
   }
   .careers-section-1__title-2 {
-    font-size: 45px;
+    font-size: 55px;
     -webkit-animation: title-anim-2-mq 2s ease;
             animation: title-anim-2-mq 2s ease;
   }
@@ -2136,19 +2124,14 @@ select:-webkit-autofill:focus {
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 45px;
-    letter-spacing: 0.1em;
   }
   60% {
     opacity: 1;
     top: 48%;
-    font-size: 45px;
-    letter-spacing: 0.1em;
   }
   100% {
-    top: 43%;
-    font-size: 30px;
-    letter-spacing: 0.05em;
+    opacity: 1;
+    top: 41%;
   }
 }
 
@@ -2156,19 +2139,14 @@ select:-webkit-autofill:focus {
   0% {
     opacity: 0;
     top: 48%;
-    font-size: 45px;
-    letter-spacing: 0.1em;
   }
   60% {
     opacity: 1;
     top: 48%;
-    font-size: 45px;
-    letter-spacing: 0.1em;
   }
   100% {
-    top: 43%;
-    font-size: 30px;
-    letter-spacing: 0.05em;
+    opacity: 1;
+    top: 41%;
   }
 }
 
@@ -2200,76 +2178,89 @@ select:-webkit-autofill:focus {
   position: relative;
   padding-top: 10vh;
   min-height: 100vh;
-  margin: 0 10%;
-  background: #101016;
-}
-
-.history__container:before {
-  content: "";
-  position: absolute;
-  height: 50%;
-  width: 1px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
-  background: linear-gradient(to top, #fff, #fff, rgba(10, 10, 10, 0));
-  left: 50%;
-}
-
-.history__container:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 50%;
-  width: 1px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
-  background: linear-gradient(to bottom, #fff, #fff, rgba(10, 10, 10, 0));
-  left: 50%;
+  background: url(../img/crew-dragon.jpg) no-repeat center fixed;
+  background-size: cover;
 }
 
 .history__timeline {
   padding: 7vh 15px;
-  margin: 0 auto;
+  margin: 0 10%;
+  position: relative;
+  opacity: 0;
+  -webkit-transform: 0.5s all ease-in-out;
+          transform: 0.5s all ease-in-out;
+}
+
+.history__timeline--appear {
+  opacity: 1;
+}
+
+.history__timeline:before, .history__timeline::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(#fff), color-stop(#fff), color-stop(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
+  background: linear-gradient(to top, #fff, #fff, #fff, #fff, #fff, rgba(10, 10, 10, 0));
+  left: 100%;
+}
+
+.history__timeline:after {
+  top: 48%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#fff), color-stop(#fff), color-stop(#fff), to(rgba(10, 10, 10, 0)));
+  background: linear-gradient(to bottom, #fff, #fff, #fff, #fff, rgba(10, 10, 10, 0));
 }
 
 .history__date {
   font-family: SansProLight;
   position: absolute;
-  top: 1%;
   background: #082346;
   padding: 10px;
   right: 0;
+  top: 0;
+}
+
+.history__date::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  right: -8%;
+  top: 30%;
+  background: #082346;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .history__moment {
   position: relative;
-  width: 45%;
+  width: 100%;
   padding: 30px;
   margin-bottom: 70px;
   border-radius: 4px;
+  -webkit-backdrop-filter: blur(5px) grayscale(10%) brightness(80%);
+          backdrop-filter: blur(5px) grayscale(10%) brightness(80%);
   -webkit-box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
           box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
-.history__moment:nth-of-type(even) {
-  margin-left: auto;
-  text-align: end;
-}
-
-.history__moment:nth-of-type(even) .history__date {
-  left: 0;
-  right: auto;
-}
-
-.history__moment:nth-of-type(even) .history__title {
-  padding-left: 16%;
-  padding-right: 0;
+.history__moment--appear {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .history__title {
+  margin-top: 10%;
   font-family: SansProBold;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 17px;
-  padding-right: 16%;
+  padding-right: 10%;
   padding-left: 0;
 }
 
@@ -2279,17 +2270,75 @@ select:-webkit-autofill:focus {
 }
 
 .history__link {
-  background: #da4078;
+  background: #da4078db;
   padding: 8px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
   margin-top: 25px;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 5px;
+  letter-spacing: 1px;
   -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
           box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
   text-decoration: none;
   cursor: pointer;
+}
+
+.history__link:hover {
+  background: #da4078;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .history__title {
+    padding-right: 35%;
+    margin-top: 15px;
+  }
+  .history__moment {
+    width: 90%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .history__title {
+    padding-right: 5%;
+  }
+  .history__moment {
+    width: 45%;
+  }
+  .history__moment:nth-of-type(even) {
+    margin-left: auto;
+    text-align: end;
+  }
+  .history__moment:nth-of-type(even) .history__date {
+    left: 0;
+    right: auto;
+  }
+  .history__moment:nth-of-type(even) .history__date::after {
+    right: 0;
+    left: -8%;
+  }
+  .history__moment:nth-of-type(even) .history__title {
+    padding-left: 10%;
+    padding-right: 0;
+  }
+  .history__timeline {
+    padding: 7vh 0;
+    margin: 0 10%;
+  }
+  .history__timeline::before, .history__timeline::after {
+    left: 50%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .history {
+    margin: 0 10%;
+  }
+  .history__timeline {
+    font-size: 1.1em;
+  }
 }
 
 .footer {

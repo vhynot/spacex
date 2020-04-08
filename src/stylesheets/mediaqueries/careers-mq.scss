@@ -3,11 +3,11 @@
  @media (min-width: 576px) {  
     .careers-section-1 {
         &__title-1 {
-            font-size: 30px;
+            font-size: 45px;
             animation: title-anim-1-mq 2s ease;
         }
         &__title-2 {
-            font-size: 45px;
+            font-size: 55px;
             animation: title-anim-2-mq 2s ease;
         }
     }
@@ -55,20 +55,16 @@
     0% {
         opacity: 0;
         top: 48%;
-        font-size: 45px;
-        letter-spacing: 0.1em;
     }
     60% {
         opacity: 1;
         top: 48%;
-        font-size: 45px;
-        letter-spacing: 0.1em;
+
 
     }
     100%{
-        top: 43%;
-        font-size: 30px;
-        letter-spacing: 0.05em;
+        opacity: 1;
+        top: 41%;
     }
 }
 @keyframes title-anim-2-mq{
