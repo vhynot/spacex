@@ -17,15 +17,15 @@ function History() {
     setFetched(true);
     setIsLoading(false);
   }
-
+  
   const handleScroll = () => {
     setScrollHeight(window.scrollY)
   }
-
+  
   useEffect(() => {
     fetchItem(url);
   }, [])
-
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => {

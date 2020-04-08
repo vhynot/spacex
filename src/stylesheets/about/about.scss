@@ -153,6 +153,7 @@
     min-width: 74%;
     height: 50vh;
     z-index: 10;
+    border-radius: 5px;
 }
   
 div.leaflet-popup-content-wrapper {
@@ -178,4 +179,20 @@ div.leaflet-control-attribution.leaflet-control {
    &:hover{
        opacity: 1;
    }
+}
+
+.leaflet-bar {
+    a {
+        background-color: #212120 !important;
+        border-bottom: #000 !important;
+        &:hover {
+            background-color: #3d3d3b !important;
+            color:#1f1d1d !important;
+        }
+    }
+}
+.leaflet-container {
+    a {
+        color:#585858 !important;
+    }
 }

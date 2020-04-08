@@ -17,6 +17,10 @@
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .navbar {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
   .navbar__link--fadein-1, .navbar__link--fadeout-1, .navbar__link--fadein-2, .navbar__link--fadeout-2, .navbar__link--fadein-3, .navbar__link--fadeout-3, .navbar__link--fadein-4, .navbar__link--fadeout-4 {
     -webkit-animation: none;
             animation: none;

@@ -1,7 +1,7 @@
 import React from 'react';
 import svg1 from "../../../../img/Component1.svg";
 
-const RocketTemplate = ({rocket}) => {
+const RocketTemplate = ({rocket, loading, fetched}) => {
     return (
     <div>       
         <section className="rocket-details__section-1">
@@ -9,12 +9,12 @@ const RocketTemplate = ({rocket}) => {
                 <div className="rocket-details__section-1__layer-1"></div>
                 <img className="rocket-details__section-1__layer-2 svg-1" src={svg1} alt="svg1" />
             </div>
-            <div className="rocket-details__section-1__title">
+            <div className={`rocket-details__section-1__title ${(!loading && fetched) ? "rocket-details--active" : null}`}>
                 <h3 className="rocket-details__section-1__title__text">
                     {rocket.rocket_name}
                 </h3>
             </div>
-            <div className="rocket-details__section-1__details-card-1">
+            <div className={`rocket-details__section-1__details-card-1 ${(!loading && fetched) ? "rocket-details--active" : null}`}>
                 <div className="rocket-details__section-1__img-wrapper">
                     <img className="rocket-details__section-1__img" src={rocket.flickr_images} alt=""/>
                 </div>
@@ -23,7 +23,7 @@ const RocketTemplate = ({rocket}) => {
                 </div>
             </div>
         </section>  
-        <section className="rocket-details__section-2">
+        <section className={`rocket-details__section-2 ${(!loading && fetched) ? "rocket-details--active" : null}`}>
             <p className="rocket-details__section-2__header">Specification Card</p>
             <hr className="rocket-details__section-2__horizontal-rule"/>
             <div className="rocket-details__section-2__details">

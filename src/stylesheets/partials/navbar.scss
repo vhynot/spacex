@@ -16,7 +16,7 @@
 }
 
 .navbar {
-    background: rgba(11, 11, 17, 0.6);
+    background: rgba(11, 11, 17, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -27,6 +27,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    backdrop-filter: none;
     &__logo {
         padding-right: 10px;
         height: 25px;
@@ -48,7 +49,7 @@
         justify-content: space-around;
         height: 92vh;
         width: 50vw;
-        background: rgba(11, 11, 17, 0.5);
+        background: rgba(11, 11, 17, 0.7);
         transform: translate(100%);
         transition: 0.5s ease-in;
         &--active {

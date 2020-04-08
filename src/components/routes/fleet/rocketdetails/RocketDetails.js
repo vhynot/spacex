@@ -8,11 +8,16 @@ function RocketDetails({match}) {
      diameter: [],
      mass: []
   });
+  const [loading, setLoading] = useState(false);
+  const [fetched, setfetched] = useState(false);
 
   const fetchRocket= async () => {
+    setLoading(true);
     const data = await fetch(`https://api.spacexdata.com/v3/rockets/${match.params.rocket_id}`);
     const rocket = await data.json();
     setRocket(rocket);
+    setfetched(true);
+    setLoading(false);
   };
   
   useEffect(() =>{
@@ -21,7 +26,9 @@ function RocketDetails({match}) {
  
   return (
     <div className="rocket-details">
-      <RocketTemplate rocket={rocket}/>
+      <RocketTemplate rocket={rocket}
+                      loading={loading}
+                      fetched={fetched}/>
     </div>
   )
 }

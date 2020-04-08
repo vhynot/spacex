@@ -137,7 +137,7 @@
 }
 
 .navbar {
-  background: rgba(11, 11, 17, 0.6);
+  background: rgba(11, 11, 17, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -153,6 +153,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .navbar__logo {
@@ -192,7 +194,7 @@
       justify-content: space-around;
   height: 92vh;
   width: 50vw;
-  background: rgba(11, 11, 17, 0.5);
+  background: rgba(11, 11, 17, 0.7);
   -webkit-transform: translate(100%);
           transform: translate(100%);
   -webkit-transition: 0.5s ease-in;
@@ -364,6 +366,10 @@
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .navbar {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
   .navbar__link--fadein-1, .navbar__link--fadeout-1, .navbar__link--fadein-2, .navbar__link--fadeout-2, .navbar__link--fadein-3, .navbar__link--fadeout-3, .navbar__link--fadein-4, .navbar__link--fadeout-4 {
     -webkit-animation: none;
             animation: none;
@@ -913,6 +919,7 @@ iframe {
   min-width: 74%;
   height: 50vh;
   z-index: 10;
+  border-radius: 5px;
 }
 
 div.leaflet-popup-content-wrapper {
@@ -941,6 +948,20 @@ div.leaflet-control-attribution.leaflet-control {
 
 .leaflet-interactive:hover {
   opacity: 1;
+}
+
+.leaflet-bar a {
+  background-color: #212120 !important;
+  border-bottom: #000 !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #3d3d3b !important;
+  color: #1f1d1d !important;
+}
+
+.leaflet-container a {
+  color: #585858 !important;
 }
 
 @media (max-width: 310px) {
@@ -1501,6 +1522,11 @@ div.leaflet-control-attribution.leaflet-control {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .rocket-details__section-1__title__text {
@@ -1521,6 +1547,11 @@ div.leaflet-control-attribution.leaflet-control {
           box-shadow: -1px 1px 5px 8px rgba(0, 0, 0, 0.5);
   border-radius: 0.5%;
   padding: 1.5% 1.5%;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s all 0.5s ease-in-out;
+  transition: 0.5s all 0.5s ease-in-out;
 }
 
 .rocket-details__section-1__img-wrapper {
@@ -1571,6 +1602,11 @@ div.leaflet-control-attribution.leaflet-control {
           box-shadow: -1px 1px 5px 7px rgba(0, 0, 0, 0.3);
   border-radius: 0.5%;
   padding: 2% 4%;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.5s all 0.7s ease-in-out;
+  transition: 0.5s all 0.7s ease-in-out;
 }
 
 .rocket-details__section-2__header {
@@ -1612,6 +1648,12 @@ div.leaflet-control-attribution.leaflet-control {
   font-family: SansProBold;
   text-transform: uppercase;
   font-size: 0.9em;
+}
+
+.rocket-details--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .units {
@@ -2180,6 +2222,17 @@ select:-webkit-autofill:focus {
   min-height: 100vh;
   background: url(../img/crew-dragon.jpg) no-repeat center fixed;
   background-size: cover;
+}
+
+.history__container::before {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
 
 .history__timeline {

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import L from 'leaflet';
 import  "../../../../../node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.min.js";
+import "../../../../stylesheets/about/about.css.map"
 import icn from '../../../../icons/Favorites/rocket.png';
 
 function Map(){
