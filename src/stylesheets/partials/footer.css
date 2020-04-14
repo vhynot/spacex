@@ -1,5 +1,4 @@
 .footer {
-  background: #0b0b11;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,8 +8,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.7em;
   min-height: 7vh;
+  background: #0b0b11;
+  font-size: 0.7em;
 }
 
 .footer__resources {
@@ -23,12 +23,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: SansProExtraLight;
-  text-decoration: none;
-  color: white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: white;
+  font-family: SansProExtraLight;
+  text-decoration: none;
 }
 
 .footer__social {
@@ -39,8 +39,8 @@
 }
 
 .footer__social__caption {
-  font-family: SansProLight;
   padding-top: 4%;
+  font-family: SansProLight;
 }
 
 .footer__icons {

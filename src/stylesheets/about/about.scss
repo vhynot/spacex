@@ -1,48 +1,47 @@
 .about-section-1 {
-    font-family: SansProBold;
-    letter-spacing: 0.3em;
-    font-size: 1.2em;
-    background: url(../img/Moon_rocket.jpg) no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    min-height: 52vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
+    min-height: 52vh;
+    background: url(../img/Moon_rocket.jpg) no-repeat center center;
+    background-size: cover;
+    font-family: SansProBold;
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
     &__text {
         text-shadow: 1.4px 1.4px #da4078;
     }
 }
 
 .about-section-2 {
-    font-size: 0.7em;
-    background: $fifth;
     position: relative;
     width: 100%;
     min-height: 150vh;
     padding-top: 6%;
+    background: $fifth;
+    font-size: 0.7em;
     &__article-1-wrapper {
-        background: $first;
         display: flex;
         align-items: center;
         text-align: justify;
         margin: 0 4%;
         padding: 6% 6%;
+        background: $first;
     }
     &__article-1 {
+        position: relative;
+        color: #d6daef;
         font-family: SansProLight;
         font-size: 1.4em;
         line-height: 1.35em;
         letter-spacing: 0.09em;
-        color: #d6daef;
-        position: relative;
     }
 }
 
 .about-section-2 {
     &__article-2-wrapper {
-        background: $first;
         display:flex;
         align-items: center;
         text-align: justify;
@@ -50,68 +49,69 @@
         margin: 0 4%;
         padding: 0 4%;
         padding-top: 4%;
+        background: $first;
     }
     &__article-2-layer-2 {
-        background: $second;
         margin: 0 4%;
         padding: 4% 4%;
+        background: $second;
     }
     &__article-2 {
+        position: relative;
+        color: #d6daef;
         font-family: SansProLight;
         font-size: 1.4em;
         line-height: 1.35em;
         letter-spacing: 0.09em;
-        color: #d6daef;
-        position: relative;
     }
 }
 
 .about-section-2 {
     &__article-3-wrapper {
-        background: $first;
         position: relative;
         min-height: 33%; 
         margin: 0 4%;
         padding: 0 4%;
+        background: $first;
     }
     &__article-3-layer-2 {
-        background: $second;
         height: 100%;
         margin: 0 4%;
         padding: 0 8%;
         padding-top: 8%;
+        background: $second;
     }
     &__article-3-layer-3 {
-        background: $third;
-        opacity: 0.8;
         height: 100%;
         margin: 0 4%;
         padding: 8% 8%;
+        background: $third;
+        opacity: 0.8;
     }
     &__article-3-about-us {
         display: block;
         text-align: center;
         height: 50%;
         padding: 16% 4%;
-        background: $fourth;
         margin-bottom: 16%;
+        background: $fourth;
     }
     &__about-us {
         margin: 6% 2%;
         &__details-1 {
+            display: block;
+            padding-bottom: 0.5em;
             font-family: SansProLight;
             font-size: 1.3em;
             letter-spacing: 0.05em;
-            display: block;
-            padding-bottom: 0.5em;
         }
         &__details-2 {
+            display: block;
             font-family: SansProBold;
-            text-shadow: 0.4px 0.4px #da4078;
             font-size: 1.3em;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            display: block;
+            text-shadow: 0.4px 0.4px #da4078;
         }
     }
     &__article-3-office {
@@ -125,44 +125,44 @@
         display: block;
         text-align: center;
         &__details-1{
+            display: block;
             font-family: SansProBold;
             font-size: 1.3em;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             text-shadow: 0.5px 0.5px #da4078;
-            display: block;
         }
         &__details-2 {
+            display: block;
             font-family: SansProLight;
             font-size: 1.1em;
             letter-spacing: 0.12em;
-            display: block;
         }
     }
 }
 
 .about-section-3 {
-    background: #101017;
     display:flex;
     justify-content: center;
     min-width: 75%;
+    background: #101017;
 }
 
 #map {
-    margin: 10vh 0;
+    z-index: 10;
     min-width: 74%;
     height: 50vh;
-    z-index: 10;
+    margin: 10vh 0;
     border-radius: 5px;
 }
   
 div.leaflet-popup-content-wrapper {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     display:flex;
-    text-align: center;
     background: #696969;
     color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
   
 div.leaflet-popup-tip {
@@ -183,8 +183,8 @@ div.leaflet-control-attribution.leaflet-control {
 
 .leaflet-bar {
     a {
-        background-color: #212120 !important;
         border-bottom: #000 !important;
+        background-color: #212120 !important;
         &:hover {
             background-color: #3d3d3b !important;
             color:#1f1d1d !important;

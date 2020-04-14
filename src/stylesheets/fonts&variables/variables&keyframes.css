@@ -36,61 +36,61 @@
 
 @-webkit-keyframes NavLinkFadeIn {
   from {
-    opacity: 0;
-    width: 0;
     -webkit-transform: translateX(150px);
             transform: translateX(150px);
+    width: 0;
+    opacity: 0;
   }
   to {
-    opacity: 1;
-    width: 100%;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    width: 100%;
+    opacity: 1;
   }
 }
 
 @keyframes NavLinkFadeIn {
   from {
-    opacity: 0;
-    width: 0;
     -webkit-transform: translateX(150px);
             transform: translateX(150px);
+    width: 0;
+    opacity: 0;
   }
   to {
-    opacity: 1;
-    width: 100%;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    width: 100%;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes NavLinkFadeOut {
   from {
-    opacity: 1;
-    width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    width: 100%;
+    opacity: 1;
   }
   to {
-    opacity: 0;
-    width: 0;
     -webkit-transform: translateX(150px);
             transform: translateX(150px);
+    width: 0;
+    opacity: 0;
   }
 }
 
 @keyframes NavLinkFadeOut {
   from {
-    opacity: 1;
-    width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    width: 100%;
+    opacity: 1;
   }
   to {
-    opacity: 0;
-    width: 0;
     -webkit-transform: translateX(150px);
             transform: translateX(150px);
+    width: 0;
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=variables&keyframes.css.map */

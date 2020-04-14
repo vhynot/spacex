@@ -1,8 +1,8 @@
 @mixin pushEffect($size) {
     transform: translate3d(5%);
-    transition: 0.25s;
-    opacity: 1;
     font-size: $size;
+    opacity: 1;
+    transition: 0.25s;
 }
 
 @mixin moveEffect($left, $top, $opct) {
@@ -21,14 +21,14 @@
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
     .rocket-wrapper {
-        background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-        max-width: 100vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         justify-content: center;
         align-items: center;
         text-align: center;
+        max-width: 100vw;
+        background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     }
 
     .rocket {
@@ -36,8 +36,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 46vh;
         overflow: hidden;
+        height: 46vh;
         margin: 0;
         &__link {
             height: 50%;
@@ -45,8 +45,8 @@
             opacity: 0.8;
             transition: 0.3s;
             &:hover {
-                height: 60%;
                 width: 70%;
+                height: 60%;
                 .rocket__img {
                     opacity: 0.4;
                     filter: blur(1.8px) grayscale(70%);
@@ -55,10 +55,10 @@
             }
         }
         &__img {
-            height: 100%;
-            width:  100%;
             object-fit: cover;
             object-position: center center;
+            height: 100%;
+            width:  100%;
             opacity: 0.8;
             transition: 0.25s;
             filter: grayscale(30%);
@@ -83,11 +83,11 @@
                     }
                 }
                 .rocket__title {
-                    font-size: 0.3em;
-                    display: flex;
                     position: absolute;
-                    @include moveEffect(90%, 90%, 0);
+                    display: flex;
+                    font-size: 0.3em;
                     transition: 0.3s;
+                    @include moveEffect(90%, 90%, 0);
                 }
             }
         }
@@ -110,9 +110,9 @@
                     }
                 }
                 .rocket__title {
-                    font-size: 0.3em;
-                    display: flex;
                     position: absolute;
+                    display: flex;
+                    font-size: 0.3em;
                     @include moveEffect(10%, 90%, 0);
                     transition: 0.25s;
                 }
@@ -138,9 +138,9 @@
                     }
                 }
                 .rocket__title {
-                    font-size: 0.3em;
-                    display: flex;
                     position: absolute;
+                    display: flex;
+                    font-size: 0.3em;
                     @include moveEffect(90%, 10%, 0);
                     transition: 0.25s;
                 }
@@ -165,9 +165,9 @@
                     }
                 }
                 .rocket__title {
-                    font-size: 0.3em;
-                    display: flex;
                     position: absolute;
+                    display: flex;
+                    font-size: 0.3em;
                     @include moveEffect(10%, 10%, 0);
                     transition: 0.25s;
                 }
@@ -181,8 +181,8 @@
 
     .rocket {
         &__link{
-            font-size: 0.9em;
             height: 60%;
+            font-size: 0.9em;
             &:hover {
                 height: 70%;
                 width: 70%;
@@ -225,8 +225,8 @@
                 }
                 &:hover {
                     .rocket__title {
-                        @include moveEffect(64%, 35%, 0.8);
                         letter-spacing: 0.05em;
+                        @include moveEffect(64%, 35%, 0.8);
                     }
                 }
             }

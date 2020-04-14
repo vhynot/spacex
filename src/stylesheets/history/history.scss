@@ -1,24 +1,24 @@
 .history {
     &__container {
         position: relative;
-        padding-top: 10vh;
         min-height: 100vh;
+        padding-top: 10vh;
         background: url(../img/crew-dragon.jpg) no-repeat center fixed;
         background-size: cover;
         &::before {
             content: "";
             position: absolute;
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
             bottom: 0;
             left: 0;
             right: 0;
             height: 100%;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
         }
     }
     &__timeline {
+        position: relative;
         padding: 7vh 15px;
         margin: 0 10%;
-        position: relative;
         opacity: 0;
         transform: 0.5s all ease-in-out;
         &--appear {
@@ -27,10 +27,10 @@
         &:before, &::after {
             content: "";
             position: absolute;
+            left: 100%;
             height: 50%;
             width: 5px;
             background: linear-gradient(to top, #fff, #fff, #fff, #fff, #fff, rgba(10,10,10,0));
-            left: 100%;
         }
         &:after {
             top: 48%;
@@ -38,25 +38,26 @@
         }
     }
     &__date {
-        font-family: SansProLight;
         position: absolute;
-        background: rgb(8, 35, 70);
-        padding: 10px;
         right: 0;
         top: 0;
+        padding: 10px;
+        background: rgb(8, 35, 70);
+        font-family: SansProLight;
         &::after {
             content: "";
             position: absolute;
-            height: 15px;
-            width: 15px;
             right: -8%;
             top: 30%;
-            background: #082346;
             transform: rotate(45deg);
+            height: 15px;
+            width: 15px;
+            background: #082346;
         }
     }
     &__moment {
         position:relative;
+        transform: translateY(20px);
         width: 100%;
         padding: 30px;
         margin-bottom: 70px;
@@ -64,32 +65,31 @@
         backdrop-filter: blur(5px) grayscale(10%) brightness(80%);
         box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
         opacity: 0;
-        transform: translateY(20px);
         transition: 0.5s all ease-in-out;
         &--appear {
-            opacity: 1;
             transform: translateY(0);
+            opacity: 1;
         }
     }
     &__title {
         margin-top: 10%;
+        padding-right: 10%;
+        padding-left: 0;
         font-family: SansProBold;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        padding-right: 10%;
-        padding-left: 0;
     }
     &__details {
-        font-family: SansProLight;
         margin-top: 10px;
+        font-family: SansProLight;
     }
 
     &__link {
-        background: #da4078db;
+        display: inline-block;
         padding: 8px 20px;
         margin-top: 25px;
-        display: inline-block;
         border-radius: 5px;
+        background: #da4078db;
         letter-spacing: 1px;
         box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
         text-decoration: none;

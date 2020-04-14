@@ -5,20 +5,20 @@
 }
 
 .footer {
-    background: rgba(11, 11, 17, 1);
     @include flex(space-between);
-    font-size: 0.7em;
     min-height: 7vh;
+    background: rgba(11, 11, 17, 1);
+    font-size: 0.7em;
     &__resources {
         display: block;
         width: 35%;
         margin:0 auto;
         &__link {
             display: flex;
+            width: fit-content;
+            color: white;
             font-family: SansProExtraLight;
             text-decoration: none;
-            color: white;
-            width: fit-content;
         }
     }
     &__social {
@@ -27,8 +27,8 @@
         width: 48%;
         margin: 0 auto;
         &__caption {
-            font-family: SansProLight;
             padding-top: 4%;
+            font-family: SansProLight;
         }
     }
     &__icons {

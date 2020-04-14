@@ -1,9 +1,4 @@
 .careers-section-1 {
-  background: url(../img/joinus.jpg) no-repeat center center;
-  background-position-x: 70%;
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,18 +9,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/joinus.jpg) no-repeat center center;
+  background-position-x: 70%;
+  background-size: cover;
 }
 
 .careers-section-1::before {
   content: "";
   position: absolute;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
-  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
   bottom: 0;
   left: 0;
   right: 0;
   top: 10%;
   height: 90%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
 }
 
 .careers-section-1__title-wrapper {
@@ -44,55 +44,55 @@
 
 .careers-section-1__title-1 {
   position: absolute;
+  top: 41%;
   font-size: 30px;
   font-family: SansProLight;
   letter-spacing: 0.05em;
-  top: 41%;
   -webkit-animation: title-anim-1 2s ease;
           animation: title-anim-1 2s ease;
 }
 
 .careers-section-1__title-2 {
   position: absolute;
+  top: 48%;
   font-size: 45px;
   font-family: SansProBold;
   letter-spacing: 0.1em;
-  top: 48%;
   -webkit-animation: title-anim-2 2s ease;
           animation: title-anim-2 2s ease;
 }
 
 .careers-section-2 {
-  background-color: #101017;
   height: 105vh;
   position: relative;
   overflow: hidden;
+  background-color: #101017;
 }
 
 .careers-section-2::before, .careers-section-2::after {
   content: '';
-  display: block;
   position: absolute;
+  z-index: 5;
+  top: 0;
+  display: block;
   width: 100vw;
   height: 100vh;
   background: #49467657;
   -webkit-animation: squares 120s linear infinite;
           animation: squares 120s linear infinite;
-  top: 0;
-  z-index: 5;
 }
 
 .careers-section-2::after {
-  animation-direction: reverse;
   background: rgba(46, 86, 118, 0.308);
+  animation-direction: reverse;
 }
 
 .careers-section-2__form {
+  position: relative;
+  z-index: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  z-index: 6;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -103,17 +103,15 @@
 }
 
 .careers-section-2__polygon {
-  overflow: visible;
-  width: 100vw;
-  display: block;
-  height: 15vh;
   position: relative;
   z-index: 6;
+  display: block;
+  width: 100vw;
+  height: 15vh;
+  overflow: visible;
 }
 
 .form {
-  width: 75%;
-  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +121,8 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 75%;
+  height: 90%;
   font-size: 16px;
 }
 
@@ -138,60 +138,59 @@
 .form input:focus + .form__label .form__label__text, .form input:valid + .form__label .form__label__text {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
-  font-size: 14px;
   color: #00aaff;
+  font-size: 14px;
 }
 
 .form__error {
   height: 4%;
-  font-size: 10px;
   color: red;
+  font-size: 10px;
 }
 
 .form select {
-  background: none;
+  height: 35px;
   border-radius: 3px;
   padding-left: 8px;
-  height: 35px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background: none;
   background: url(../img/arrow.png) no-repeat center;
   background-position: 99% 65%;
 }
 
 .form__checkbox-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 20px;
-  position: relative;
   padding-left: 1%;
 }
 
 .form__checkbox-wrapper input {
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
+  z-index: 10;
+  top: 13%;
   height: 15px;
   width: 15px;
-  top: 13%;
-  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .form__checkbox-wrapper input:checked ~ .form__checkbox-style {
-  background-color: #fff;
-  border-radius: 5px;
   -webkit-transform: rotate(0deg) scale(1);
           transform: rotate(0deg) scale(1);
-  opacity: 1;
   border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 1;
 }
 
 .form__checkbox-wrapper input:checked ~ .form__checkbox-style::after {
   -webkit-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
-  opacity: 1;
   left: 3px;
   top: 1px;
   width: 3px;
@@ -200,6 +199,7 @@
   border-width: 0px 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
+  opacity: 1;
 }
 
 .form__checkbox-style {
@@ -218,6 +218,8 @@
 .form__checkbox-style::after {
   content: "";
   position: absolute;
+  -webkit-transform: rotate(0deg) scale(0);
+          transform: rotate(0deg) scale(0);
   left: 10px;
   top: 10px;
   height: 0px;
@@ -225,8 +227,6 @@
   border-radius: 5px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(0deg) scale(0);
-          transform: rotate(0deg) scale(0);
   opacity: 1;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -238,11 +238,11 @@
 }
 
 .form__button {
+  height: 50px;
+  border: none;
+  border-radius: 5px;
   background: #00aaffde;
   color: white;
-  border: none;
-  height: 50px;
-  border-radius: 5px;
   font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -258,8 +258,8 @@
 }
 
 .form__input-wrapper {
-  width: 100%;
   position: relative;
+  width: 100%;
   height: 50px;
 }
 
@@ -267,9 +267,9 @@
   width: 100%;
   height: 100%;
   padding-top: 20px;
-  background: none;
   border: none;
   border-bottom: 1px solid white;
+  background: none;
 }
 
 .form__label {
@@ -278,8 +278,8 @@
   bottom: 0px;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .form__label::after {
@@ -289,9 +289,9 @@
   bottom: -1px;
   height: 100%;
   width: 100%;
-  border-bottom: 2px solid #00aaff;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  border-bottom: 2px solid #00aaff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -305,8 +305,8 @@
 }
 
 select option {
-  color: #fff;
   background: #27324a;
+  color: #fff;
 }
 
 input:-webkit-autofill,
@@ -349,12 +349,12 @@ select:-webkit-autofill:focus {
 
 @-webkit-keyframes title-anim-1 {
   0% {
-    opacity: 0;
     top: 48%;
+    opacity: 0;
   }
   60% {
-    opacity: 1;
     top: 48%;
+    opacity: 1;
   }
   100% {
     top: 41%;
@@ -363,12 +363,12 @@ select:-webkit-autofill:focus {
 
 @keyframes title-anim-1 {
   0% {
-    opacity: 0;
     top: 48%;
+    opacity: 0;
   }
   60% {
-    opacity: 1;
     top: 48%;
+    opacity: 1;
   }
   100% {
     top: 41%;

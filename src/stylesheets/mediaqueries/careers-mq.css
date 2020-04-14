@@ -11,8 +11,8 @@
             animation: title-anim-2-mq 2s ease;
   }
   .form {
-    font-size: 18px;
     width: 70%;
+    font-size: 18px;
   }
   .form__error {
     height: 6%;
@@ -43,31 +43,31 @@
 
 @-webkit-keyframes title-anim-1-mq {
   0% {
-    opacity: 0;
     top: 48%;
+    opacity: 0;
   }
   60% {
-    opacity: 1;
     top: 48%;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
     top: 41%;
+    opacity: 1;
   }
 }
 
 @keyframes title-anim-1-mq {
   0% {
-    opacity: 0;
     top: 48%;
+    opacity: 0;
   }
   60% {
-    opacity: 1;
     top: 48%;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
     top: 41%;
+    opacity: 1;
   }
 }
 

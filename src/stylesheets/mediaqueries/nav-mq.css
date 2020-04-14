@@ -1,9 +1,9 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .navbar__logo {
-    padding-right: 45px;
     height: 35px;
     width: 250px;
+    padding-right: 45px;
   }
   .navbar__menu a li {
     position: relative;
@@ -18,6 +18,7 @@
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .navbar {
+    background: rgba(11, 11, 17, 0.7);
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -26,11 +27,8 @@
             animation: none;
   }
   .navbar__menu {
-    width: 42%;
+    background: rgba(11, 11, 17, 0.7);
     position: relative;
-    margin-top: 0;
-    height: auto;
-    background: none;
     top: 0;
     -webkit-box-orient: unset;
     -webkit-box-direction: unset;
@@ -40,6 +38,10 @@
         justify-content: space-around;
     -webkit-transform: translate(0);
             transform: translate(0);
+    width: 42%;
+    height: auto;
+    margin-top: 0;
+    background: none;
   }
   .navbar__menu li {
     display: -webkit-box;
@@ -82,14 +84,14 @@
   .navbar a li:before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 1px;
     bottom: -10px;
     left: 0;
-    background-color: #3d6387;
+    width: 100%;
+    height: 1px;
     visibility: hidden;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
+    background-color: #3d6387;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
