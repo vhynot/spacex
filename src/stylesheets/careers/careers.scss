@@ -8,7 +8,7 @@ $sixth: #00aaff;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url(../img/joinus.jpg) no-repeat center center;
+    background: url(../assets/img/joinus.jpg) no-repeat center center;
     background-position-x: 70%;
     background-size: cover;
     &::before {
@@ -117,7 +117,7 @@ $sixth: #00aaff;
         padding-left: 8px;
         appearance: none;
         background: none;
-        background: url(../img/arrow.png) no-repeat center;
+        background: url(../assets/img/arrow.png) no-repeat center;
         background-position: 99% 65%;
     }
     &__checkbox-wrapper {

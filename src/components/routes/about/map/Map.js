@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import L from 'leaflet';
 import  "../../../../../node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.min.js";
 import "../../../../stylesheets/about/about.css.map"
-import icn from '../../../../icons/Favorites/rocket.png';
+import icn from '../../../../assets/icons/rocket.png';
 
 function Map(){
     const [width, setWidth] = useState(window.innerWidth)
@@ -23,7 +23,6 @@ function Map(){
                 iconSize: [25, 45],
                 popupAnchor: [0,-21],
             });       
-    const myFilter = ['invert:94%','bright:38%','contrast:194%','saturate:97%','sepia:10%'];   
                         ///CREATING MAP///
     const mapRef = useRef(null);
 
@@ -41,10 +40,9 @@ function Map(){
             center: [lat1, long1()],
             zoom: `${(width <= 767) ? 3 : 4}`,
             layers: [
-                L.tileLayer.colorFilter('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                L.tileLayer.colorFilter('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
                 maxZoom: 15,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                filter: myFilter,
             })]                   
         });
     }, []);

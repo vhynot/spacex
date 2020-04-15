@@ -1,34 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import RocketTemplate from "./RockeTemplate";
+import svg1 from "../../../../assets/img/Component1.svg";
+import useDataFetcher from "../../../../utilities/customHooks/useDataFetcher"
 
-function RocketDetails({match}) {    
-  const [rocket, setRocket] = useState({
-     flickr_images: [],
-     height: [],
-     diameter: [],
-     mass: []
-  });
-  const [loading, setLoading] = useState(false);
-  const [fetched, setfetched] = useState(false);
+function RocketDetails({match}) {  
+  const param = `rockets/${match.params.rocket_id}`;
+  const {rocket, isLoading, isFetched} = useDataFetcher(param);
 
-  const fetchRocket= async () => {
-    setLoading(true);
-    const data = await fetch(`https://api.spacexdata.com/v3/rockets/${match.params.rocket_id}`);
-    const rocket = await data.json();
-    setRocket(rocket);
-    setfetched(true);
-    setLoading(false);
-  };
-  
-  useEffect(() =>{
-    fetchRocket();
-  },[]);
- 
   return (
     <div className="rocket-details">
+      <div className="rocket-details__layers" >
+        <div className="rocket-details__layer-1"></div>
+        <img className="rocket-details__layer-2 svg-1" src={svg1} alt="svg1"/>
+      </div>
       <RocketTemplate rocket={rocket}
-                      loading={loading}
-                      fetched={fetched}/>
+                      loading={isLoading}
+                      fetched={isFetched}/>
     </div>
   )
 }

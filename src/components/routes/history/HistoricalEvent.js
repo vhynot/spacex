@@ -18,12 +18,12 @@ import React, {useState, useEffect, useRef} from 'react'
 
         return (
             <div className={`history__moment ${appear ? "history__moment--appear" : null}`}
-                ref={refMoment}>
+                 ref={refMoment}>
                 <div className="history__title">
-                {item.title}
+                    {item.title}
                 </div>
                 <div className="history__date">
-                {date}
+                    {date}
                 </div>
                 <p className="history__details">
                     {item.details}

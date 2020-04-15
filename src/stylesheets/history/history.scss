@@ -1,10 +1,8 @@
 .history {
-    &__container {
-        position: relative;
-        min-height: 100vh;
-        padding-top: 10vh;
-        background: url(../img/crew-dragon.jpg) no-repeat center fixed;
+    &__img {
+        background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
         background-size: cover;
+        background-position-x: 36%;
         &::before {
             content: "";
             position: absolute;
@@ -14,6 +12,11 @@
             height: 100%;
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
         }
+    }
+    &__container {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 10vh;
     }
     &__timeline {
         position: relative;

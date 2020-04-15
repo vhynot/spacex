@@ -17,27 +17,27 @@
 
 @font-face {
   font-family: SansProSemiBold;
-  src: url("../font/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
+  src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
 }
 
 @font-face {
   font-family: SansProRegular;
-  src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: SansProBold;
-  src: url("../font/Source_Sans_Pro/SourceSansPro-Bold.ttf");
+  src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf");
 }
 
 @font-face {
   font-family: SansProLight;
-  src: url("../font/Source_Sans_Pro/SourceSansPro-Light.ttf");
+  src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
 }
 
 @font-face {
   font-family: SansProExtraLight;
-  src: url("../font/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
+  src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
 }
 
 @-webkit-keyframes transitionIn {
@@ -470,7 +470,7 @@
 .hp-section-title {
   height: auto;
   min-height: 100vh;
-  background: url(../img/background1.jpg) no-repeat center center fixed;
+  background: url(../assets/img/background1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -750,7 +750,7 @@ iframe {
   text-align: center;
   width: 100%;
   min-height: 52vh;
-  background: url(../img/Moon_rocket.jpg) no-repeat center center;
+  background: url(../assets/img/Moon_rocket.jpg) no-repeat center center;
   background-size: cover;
   font-family: SansProBold;
   font-size: 1.2em;
@@ -945,7 +945,7 @@ div.leaflet-control-attribution.leaflet-control {
 }
 
 .leaflet-interactive {
-  opacity: 0.5;
+  opacity: 0.85;
 }
 
 .leaflet-interactive:hover {
@@ -1492,26 +1492,25 @@ div.leaflet-control-attribution.leaflet-control {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 8vh;
   background: #212940;
   font-size: 16px;
 }
 
-.rocket-details__section-1__layers {
+.rocket-details__layers {
   position: absolute;
 }
 
-.rocket-details__section-1__layer-1 {
+.rocket-details__layer-1 {
   position: relative;
   width: 100vw;
-  min-height: 55vh;
+  min-height: 63vh;
   background: #212940;
   background: -webkit-linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
   background-image: -webkit-gradient(linear, left bottom, left top, from(#3d6387), color-stop(#354e6f), color-stop(#2b3b57), color-stop(#212940), to(#15182a));
   background-image: linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
 }
 
-.rocket-details__section-1__layer-2 {
+.rocket-details__layer-2 {
   position: relative;
   width: 110%;
 }
@@ -1524,6 +1523,7 @@ div.leaflet-control-attribution.leaflet-control {
   text-align: center;
   width: 100%;
   padding: 3%;
+  margin-top: 8vh;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   opacity: 0;
@@ -1547,6 +1547,7 @@ div.leaflet-control-attribution.leaflet-control {
   border-radius: 0.5%;
   padding: 1.5% 1.5%;
   margin: 2% 10%;
+  margin-top: 0;
   font-size: 1em;
   font-family: SansProLight;
   -webkit-box-shadow: -1px 1px 5px 8px rgba(0, 0, 0, 0.5);
@@ -1696,6 +1697,7 @@ div.leaflet-control-attribution.leaflet-control {
     display: flex;
     width: 85%;
     margin: 2% 7.5%;
+    margin-top: 0;
   }
   .rocket-details__section-2 {
     width: 50%;
@@ -1733,7 +1735,7 @@ div.leaflet-control-attribution.leaflet-control {
           align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: url(../img/joinus.jpg) no-repeat center center;
+  background: url(../assets/img/joinus.jpg) no-repeat center center;
   background-position-x: 70%;
   background-size: cover;
 }
@@ -1878,7 +1880,7 @@ div.leaflet-control-attribution.leaflet-control {
      -moz-appearance: none;
           appearance: none;
   background: none;
-  background: url(../img/arrow.png) no-repeat center;
+  background: url(../assets/img/arrow.png) no-repeat center;
   background-position: 99% 65%;
 }
 
@@ -2218,15 +2220,13 @@ select:-webkit-autofill:focus {
   }
 }
 
-.history__container {
-  position: relative;
-  min-height: 100vh;
-  padding-top: 10vh;
-  background: url(../img/crew-dragon.jpg) no-repeat center fixed;
+.history__img {
+  background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
   background-size: cover;
+  background-position-x: 36%;
 }
 
-.history__container::before {
+.history__img::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2235,6 +2235,12 @@ select:-webkit-autofill:focus {
   height: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+
+.history__container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10vh;
 }
 
 .history__timeline {

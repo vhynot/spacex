@@ -1,29 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import FleetRocket from "./FleetRocket";
+import useDataFetcher from "../../../utilities/customHooks/useDataFetcher"
+
 
 function Fleet() {
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [fetched, setFetched] = useState(false);
-
-  const fetchItem = async () => {
-    setIsLoading(true);
-    const data = await fetch('https://api.spacexdata.com/v3/rockets');
-    const items = await data.json();
-    setItems(items);
-    setFetched(true);
-    setIsLoading(false);
-  }
-  
-  useEffect(() =>{
-    fetchItem();
-  }, [])
+  const param = "rockets"
+  const {items, isLoading, isFetched} = useDataFetcher(param);
 
   const spreadRockets = items.map(rocket =>
         <FleetRocket  key={rocket.id} 
                       item={rocket} 
                       lodaing={isLoading}
-                      fetched={fetched}/>
+                      fetched={isFetched}/>
   )
   return (
     <div className="rocket-wrapper">

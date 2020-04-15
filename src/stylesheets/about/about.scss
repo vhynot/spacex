@@ -5,7 +5,7 @@
     text-align: center;
     width: 100%;
     min-height: 52vh;
-    background: url(../img/Moon_rocket.jpg) no-repeat center center;
+    background: url(../assets/img/Moon_rocket.jpg) no-repeat center center;
     background-size: cover;
     font-family: SansProBold;
     font-size: 1.2em;
@@ -175,7 +175,7 @@ div.leaflet-control-attribution.leaflet-control {
 }
   
 .leaflet-interactive {
-   opacity: 0.5;
+   opacity: 0.85;
    &:hover{
        opacity: 1;
    }

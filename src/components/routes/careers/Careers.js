@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import polygon from '../../../img/poly.png';
+import polygon from '../../../assets/img/poly.png';
 import InputForm from './Form'
 
 function Careers() {

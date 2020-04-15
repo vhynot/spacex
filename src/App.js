@@ -11,7 +11,7 @@ import Careers from "./components/routes/careers/Careers";
 import History from "./components/routes/history/History";
 import {ParallaxProvider} from 'react-scroll-parallax';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import ScrollToTop from "./components/window-component/ScrollToTop"
+import ScrollToTop from "./utilities/window/ScrollToTop"
 
 
 function App(){

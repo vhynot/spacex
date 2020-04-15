@@ -2,26 +2,25 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 8vh;
   background: #212940;
   font-size: 16px;
 }
 
-.rocket-details__section-1__layers {
+.rocket-details__layers {
   position: absolute;
 }
 
-.rocket-details__section-1__layer-1 {
+.rocket-details__layer-1 {
   position: relative;
   width: 100vw;
-  min-height: 55vh;
+  min-height: 63vh;
   background: #212940;
   background: -webkit-linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
   background-image: -webkit-gradient(linear, left bottom, left top, from(#3d6387), color-stop(#354e6f), color-stop(#2b3b57), color-stop(#212940), to(#15182a));
   background-image: linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
 }
 
-.rocket-details__section-1__layer-2 {
+.rocket-details__layer-2 {
   position: relative;
   width: 110%;
 }
@@ -34,6 +33,7 @@
   text-align: center;
   width: 100%;
   padding: 3%;
+  margin-top: 8vh;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   opacity: 0;
@@ -57,6 +57,7 @@
   border-radius: 0.5%;
   padding: 1.5% 1.5%;
   margin: 2% 10%;
+  margin-top: 0;
   font-size: 1em;
   font-family: SansProLight;
   -webkit-box-shadow: -1px 1px 5px 8px rgba(0, 0, 0, 0.5);

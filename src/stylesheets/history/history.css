@@ -1,12 +1,10 @@
-.history__container {
-  position: relative;
-  min-height: 100vh;
-  padding-top: 10vh;
-  background: url(../img/crew-dragon.jpg) no-repeat center fixed;
+.history__img {
+  background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
   background-size: cover;
+  background-position-x: 36%;
 }
 
-.history__container::before {
+.history__img::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -15,6 +13,12 @@
   height: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+
+.history__container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10vh;
 }
 
 .history__timeline {
