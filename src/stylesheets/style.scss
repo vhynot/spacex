@@ -12,6 +12,9 @@
 
 #root, body {
   overflow-x: hidden;
+  a:focus { 
+    outline: none; 
+  }
 }
 
 @import "./fonts&variables/fonts.scss";

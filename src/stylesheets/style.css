@@ -15,6 +15,10 @@
   overflow-x: hidden;
 }
 
+#root a:focus, body a:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: SansProSemiBold;
   src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
