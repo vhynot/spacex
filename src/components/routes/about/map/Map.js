@@ -6,23 +6,21 @@ import icn from '../../../../assets/icons/rocket.png';
 
 function Map(){
     const [width, setWidth] = useState(window.innerWidth)
-
     function handleResize() {
         setWidth(window.innerWidth)
     };
-
     useEffect(() => {
         window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
         }
     }, [width]);
-
     const myIcon = L.icon({
                 iconUrl: icn,
                 iconSize: [25, 45],
                 popupAnchor: [0,-21],
             });       
+    const myFilter = ['invert:13%','bright:153%','contrast:145%'];   
                         ///CREATING MAP///
     const mapRef = useRef(null);
 
@@ -34,15 +32,15 @@ function Map(){
             return -100
         }
     };
-
     useEffect(() =>{
         mapRef.current = L.map('map',{
             center: [lat1, long1()],
             zoom: `${(width <= 767) ? 3 : 4}`,
             layers: [
-                L.tileLayer.colorFilter('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-                    maxZoom: 20,
-                    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                L.tileLayer.colorFilter('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 15,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                filter: myFilter,
             })]                   
         });
     }, []);
