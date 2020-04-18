@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assets/img/logo.png';
+import {LoadingContext} from "../../utilities/loadingContext/loadingContext";
 
 function Navbar() {
+   const {navbarLoading, handleNavbarLoading} = useContext(LoadingContext);
    const [toggleMenu,setToggleMenu] = useState(false);
 
    const setToggle = () => setToggleMenu(!toggleMenu);
 
+   useEffect(() => {
+      window.addEventListener('load', handleNavbarLoading)
+      return () => {
+          window.removeEventListener('load', handleNavbarLoading)
+      }
+  }, [])
+
     return (
-      <nav className="navbar">
+      <nav className={`navbar ${navbarLoading ? "navbar--appear" : null}`}>
          <Link to="/">
             <img className="navbar__logo" src={logo} alt="logo"/>
          </Link>

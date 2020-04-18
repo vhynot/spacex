@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import {LoadingContextProvider} from './utilities/loadingContext/loadingContext'
 
 ReactDOM.render(
-  <App />,
+  <LoadingContextProvider>
+    <App />
+  </LoadingContextProvider>,
   document.getElementById('root')
 );

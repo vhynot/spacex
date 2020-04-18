@@ -36,9 +36,6 @@
   .rocket__link {
     height: 50%;
     width: 50%;
-    opacity: 0.8;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
   }
   .rocket__link:hover {
     width: 70%;

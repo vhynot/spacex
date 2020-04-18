@@ -8,10 +8,13 @@
  /* Small devices (landscape phones, 576px and up) */
  @media (min-width: 576px) {  
     .about-section-1 {
-        font-size: 1.4em;
-        letter-spacing: 0.4em;
         &__text {
+            font-size: 1.4em;
             text-shadow: 1.4px 1.4px #da4078;
+            letter-spacing: 0.2em;
+            &--appear {
+                letter-spacing: 0.4em;
+            }
         }
     }
 
@@ -24,10 +27,13 @@
 @media (min-width: 768px) {  
 
     .about-section-1 {
-        font-size: 1.6em;
-        letter-spacing: 0.5em;
         &__text {
+            font-size: 1.8em;
             text-shadow: 1.6px 1.6px #da4078;
+            letter-spacing: 0.3em;
+            &--appear {
+                letter-spacing: 0.5em;
+            }
         }
     }
   
@@ -110,7 +116,14 @@
   }
   
   /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-
-  
+  @media (min-width: 1200px) {
+    .about-section-1 {
+        &--text {
+            font-size: 2em;
+            letter-spacing: 0.4em;
+            &--appear {
+                letter-spacing: 0.7em;
+            }
+        }
+    }
   }

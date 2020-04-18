@@ -1,12 +1,22 @@
-import React from 'react';
-import Leaflet from './map/Map'
+import React, {useEffect, useRef} from 'react';
+import Leaflet from './map/Map';
+import moonRocket from '../../../assets/img/Moon_rocket.jpg'
 
 function About(){
+  const imageRef = useRef(null)
+
+  useEffect(() => {
+    const img = new Image();
+      img.onload = function(){
+        imageRef.current.style.backgroundImage = `url('${moonRocket}')`
+      }
+
+  }, [])
 
   return (
     <div>
-      <section className="about-section-1">
-          <h3 className="about-section-1__text">ADVANCING THE FUTURE</h3>
+      <section ref={imageRef} className={`about-section-1 `} >
+          <h3 className={`about-section-1__text `}>ADVANCING THE FUTURE</h3>
       </section>
       <section className="about-section-2">
             <div className="about-section-2__article-1-wrapper">
@@ -75,5 +85,7 @@ function About(){
     </div>
   );
 }
+// ${aboutLoading ? "about-section-1--appear" : null}
+// ${aboutLoading ? "about-section-1__text--appear": null}
 
 export default About;

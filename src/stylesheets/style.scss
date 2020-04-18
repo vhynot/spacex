@@ -1,9 +1,10 @@
+@import "./fonts&variables/fonts.scss";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: SansProRegular;
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SansProRegular;
+  color: white;
 }
 
 #root{
@@ -17,7 +18,6 @@
   }
 }
 
-@import "./fonts&variables/fonts.scss";
 @import "./fonts&variables/variables&keyframes.scss";
 
 @import "./partials/navbar.scss";

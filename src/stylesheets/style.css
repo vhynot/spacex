@@ -1,24 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: SansProRegular;
-  color: white;
-}
-
-#root {
-  background-color: rgba(0, 0, 7, 0.938);
-}
-
-#root, body {
-  overflow-x: hidden;
-}
-
-#root a:focus, body a:focus {
-  outline: none;
-}
-
 @font-face {
   font-family: SansProSemiBold;
   src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
@@ -44,6 +23,27 @@
   src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: SansProRegular;
+  color: white;
+}
+
+#root {
+  background-color: rgba(0, 0, 7, 0.938);
+}
+
+#root, body {
+  overflow-x: hidden;
+}
+
+#root a:focus, body a:focus {
+  outline: none;
+}
+
 @-webkit-keyframes transitionIn {
   from {
     min-height: 0vh;
@@ -62,21 +62,21 @@
   }
 }
 
-@-webkit-keyframes op {
+@-webkit-keyframes op-1 {
   from {
     opacity: 0;
   }
   to {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
-@keyframes op {
+@keyframes op-1 {
   from {
     opacity: 0;
   }
   to {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
@@ -154,11 +154,22 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 8vh;
+  height: 8vh;
   background: rgba(11, 11, 17, 0.95);
   color: white;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.navbar--appear {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .navbar__logo {
@@ -471,11 +482,32 @@
   }
 }
 
+.fade--appear {
+  opacity: 0;
+}
+
+.fade--appear-active {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.fade--appear-active-done {
+  opacity: 1;
+}
+
 .hp-section-title {
   height: auto;
   min-height: 100vh;
   background: url(../assets/img/background1.jpg) no-repeat center center fixed;
   background-size: cover;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.hp-section-title--appear {
+  opacity: 1;
 }
 
 .hp-section-title__layer {
@@ -513,6 +545,17 @@
   font-size: 30px;
   letter-spacing: 0.1em;
   font-weight: 500;
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: all .6s ease 1s;
+  transition: all .6s ease 1s;
+}
+
+.hp-section-title__text-1--appear {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hp-section-title__text-2 {
@@ -522,6 +565,17 @@
   font-family: SansProSemiBold;
   font-size: 34px;
   letter-spacing: 0.01em;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: all .6s ease 1s;
+  transition: all .6s ease 1s;
+}
+
+.hp-section-title__text-2--appear {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hp-section-main {
@@ -753,16 +807,63 @@ iframe {
           align-items: center;
   text-align: center;
   width: 100%;
-  min-height: 52vh;
-  background: url(../assets/img/Moon_rocket.jpg) no-repeat center center;
+  height: 62vh;
+  background: url(../assets/img/Moon_rocket.jpg);
   background-size: cover;
-  font-family: SansProBold;
-  font-size: 1.2em;
-  letter-spacing: 0.3em;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+}
+
+.about-section-1--appear {
+  -webkit-animation: action 1.3s ease;
+          animation: action 1.3s ease;
+  opacity: 1;
+  height: 52vh;
 }
 
 .about-section-1__text {
+  font-family: SansProBold;
   text-shadow: 1.4px 1.4px #da4078;
+  letter-spacing: 0.1em;
+  opacity: 1;
+  -webkit-transition: letter-spacing 1.3s ease 0.95s;
+  transition: letter-spacing 1.3s ease 0.95s;
+}
+
+.about-section-1__text--appear {
+  opacity: 1;
+  letter-spacing: 0.3em;
+}
+
+@-webkit-keyframes action {
+  0% {
+    height: 62vh;
+    opacity: 0;
+  }
+  80% {
+    height: 62vh;
+    opacity: 1;
+  }
+  100% {
+    height: 52vh;
+    opacity: 1;
+  }
+}
+
+@keyframes action {
+  0% {
+    height: 62vh;
+    opacity: 0;
+  }
+  80% {
+    height: 62vh;
+    opacity: 1;
+  }
+  100% {
+    height: 52vh;
+    opacity: 1;
+  }
 }
 
 .about-section-2 {
@@ -978,12 +1079,13 @@ div.leaflet-control-attribution.leaflet-control {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .about-section-1 {
-    font-size: 1.4em;
-    letter-spacing: 0.4em;
-  }
   .about-section-1__text {
+    font-size: 1.4em;
     text-shadow: 1.4px 1.4px #da4078;
+    letter-spacing: 0.2em;
+  }
+  .about-section-1__text--appear {
+    letter-spacing: 0.4em;
   }
   .about-section-2 {
     font-size: 0.8em;
@@ -992,12 +1094,13 @@ div.leaflet-control-attribution.leaflet-control {
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
-  .about-section-1 {
-    font-size: 1.6em;
-    letter-spacing: 0.5em;
-  }
   .about-section-1__text {
+    font-size: 1.8em;
     text-shadow: 1.6px 1.6px #da4078;
+    letter-spacing: 0.3em;
+  }
+  .about-section-1__text--appear {
+    letter-spacing: 0.5em;
   }
   .about-section-2 {
     font-size: 1em;
@@ -1083,6 +1186,16 @@ div.leaflet-control-attribution.leaflet-control {
 
 /* Large devices (desktops, 992px and up) */
 /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .about-section-1--text {
+    font-size: 2em;
+    letter-spacing: 0.4em;
+  }
+  .about-section-1--text--appear {
+    letter-spacing: 0.7em;
+  }
+}
+
 .rocket-wrapper {
   display: block;
   -webkit-box-pack: center;
@@ -1144,9 +1257,13 @@ div.leaflet-control-attribution.leaflet-control {
   height: 65%;
   width: 80%;
   text-decoration: none;
+  opacity: 0;
+}
+
+.rocket__link--active {
   opacity: 0.8;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .rocket__link:active .rocket__img {
@@ -1205,9 +1322,6 @@ div.leaflet-control-attribution.leaflet-control {
   .rocket__link {
     height: 50%;
     width: 50%;
-    opacity: 0.8;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
   }
   .rocket__link:hover {
     width: 70%;

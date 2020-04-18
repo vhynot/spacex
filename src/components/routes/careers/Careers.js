@@ -1,24 +1,23 @@
 import React,{useState, useEffect} from 'react';
 import polygon from '../../../assets/img/poly.png';
-import InputForm from './Form'
+import InputForm from './Form';
 
 function Careers() {
   const [winWidth, setWinWidth] = useState(window.innerWidth);
-
-  function handleResize() {
-    setWinWidth(window.innerWidth)
-};
-
-    useEffect(() => {
-      window.addEventListener("resize", handleResize);
-      return () => {
-          window.removeEventListener("resize", handleResize);
-      }
-  }, [winWidth]);
-
   const extraStyle = {
     width: `${winWidth}px`
   }
+
+  function handleResize() {
+    setWinWidth(window.innerWidth)
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+        window.removeEventListener("resize", handleResize);
+    }
+  }, [winWidth]);
 
     return (
       <div>

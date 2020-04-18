@@ -6,15 +6,15 @@
       min-height: 8vh;
     }
 }
-
-@keyframes op {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.8;
-    }
+@keyframes op-1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes NavLinkFadeIn{
   from{
     transform: translateX(150px);

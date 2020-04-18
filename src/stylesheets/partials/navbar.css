@@ -12,11 +12,22 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 8vh;
+  height: 8vh;
   background: rgba(11, 11, 17, 0.95);
   color: white;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.navbar--appear {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .navbar__logo {

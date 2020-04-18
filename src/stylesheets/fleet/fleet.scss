@@ -48,8 +48,11 @@
     &__link {
         @include heightWidth(65%, 80%);
         text-decoration: none;
-        opacity: 0.8;
-        transition: 0.3s;
+        opacity: 0;
+        &--active {
+            opacity: 0.8;
+            transition: all .3s;
+        }
         &:active{
             .rocket__img {
                 @include heightWidth(96%, 96%);

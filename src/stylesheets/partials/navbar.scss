@@ -24,10 +24,17 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    min-height: 8vh;
+    height: 8vh;
     background: rgba(11, 11, 17, 0.95);
     color: rgb(255 ,255 , 255);
     backdrop-filter: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .3s ease-in;
+    &--appear {
+        transform: translateY(0);
+        opacity: 1;
+    }
     &__logo {
         height: 25px;
         width: 150px;
