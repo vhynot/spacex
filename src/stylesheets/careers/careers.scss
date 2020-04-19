@@ -8,9 +8,14 @@ $sixth: #00aaff;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url(../assets/img/joinus.jpg) no-repeat center center;
-    background-position-x: 70%;
-    background-size: cover;
+    opacity: 0;
+    transition: opacity .3s;
+    &--appear {
+        opacity: 1;
+        background: url(../assets/img/joinus.jpg) no-repeat center center;
+        background-position-x: 70%;
+        background-size: cover;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -34,7 +39,11 @@ $sixth: #00aaff;
         font-size: 30px;
         font-family: SansProLight;
         letter-spacing: 0.05em ;
-        animation: title-anim-1 2s ease;
+        opacity: 0;
+        &--appear {
+            animation: title-anim-1 2s ease;
+            opacity: 1;
+        }
     }
     &__title-2 {
         position: absolute;
@@ -42,7 +51,11 @@ $sixth: #00aaff;
         font-size: 45px;
         font-family: SansProBold;
         letter-spacing: 0.1em ;
-        animation: title-anim-2 2s ease;
+        opacity: 0; 
+        &--appear {
+            animation: title-anim-2 2s ease;
+            opacity: 1;
+        }
     }
 }
 

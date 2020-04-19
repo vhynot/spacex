@@ -1,22 +1,23 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useContext} from 'react';
 import Leaflet from './map/Map';
-import moonRocket from '../../../assets/img/Moon_rocket.jpg'
+import background from '../../../assets/img/Moon_rocket.jpg'
+import {LoadingContext} from '../../../utilities/loadingContext/loadingContext'
 
 function About(){
-  const imageRef = useRef(null)
+  const {aboutLoading, handleAboutLoading} = useContext(LoadingContext);
 
   useEffect(() => {
     const img = new Image();
-      img.onload = function(){
-        imageRef.current.style.backgroundImage = `url('${moonRocket}')`
+    img.src = background;
+      img.onload = () => {
+        handleAboutLoading()
       }
-
   }, [])
 
   return (
     <div>
-      <section ref={imageRef} className={`about-section-1 `} >
-          <h3 className={`about-section-1__text `}>ADVANCING THE FUTURE</h3>
+      <section className={`about-section-1 ${aboutLoading ? "about-section-1--appear" : ""}`} >
+          <h3 className={`about-section-1__text ${aboutLoading ? "about-section-1__text--appear": ""}`}>ADVANCING THE FUTURE</h3>
       </section>
       <section className="about-section-2">
             <div className="about-section-2__article-1-wrapper">
@@ -85,7 +86,5 @@ function About(){
     </div>
   );
 }
-// ${aboutLoading ? "about-section-1--appear" : null}
-// ${aboutLoading ? "about-section-1__text--appear": null}
 
 export default About;

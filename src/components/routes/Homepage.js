@@ -1,10 +1,21 @@
-import React, {useContext} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import ReactPlayer from 'react-player';
-import {LoadingContext} from '../../utilities/loadingContext/loadingContext'
+import {LoadingContext} from '../../utilities/loadingContext/loadingContext';
+import background from '../../assets/img/background1.jpg'
 
 function Homepage(){
-    const {homepageLoading, handleHomepageLoading} = useContext(LoadingContext)
+    const {homepageLoading, handleHomepageLoading} = useContext(LoadingContext);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = background;
+        if (!homepageLoading){
+            img.onload = () => {
+                handleHomepageLoading()
+            }
+        }
+      }, [])
 
     return (
         <div>

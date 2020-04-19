@@ -1,7 +1,7 @@
-import React from 'react';
-
+import React, {useState} from 'react';
 
 const RocketTemplate = ({rocket, loading, fetched}) => {
+    const [imgLoaded, setImgLoaded] = useState(false);
     return (
         <div>       
             <section className="rocket-details__section-1">
@@ -10,16 +10,16 @@ const RocketTemplate = ({rocket, loading, fetched}) => {
                         {rocket.rocket_name}
                     </h3>
                 </div>
-                <div className={`rocket-details__section-1__details-card-1 ${(!loading && fetched) ? "rocket-details--active" : null}`}>
+                <div className={`rocket-details__section-1__details-card-1 ${((!loading && fetched) && imgLoaded) ? "rocket-details--active" : null}`}>
                     <div className="rocket-details__section-1__img-wrapper">
-                        <img className="rocket-details__section-1__img" src={rocket.flickr_images} alt=""/>
+                        <img onLoad={() => setImgLoaded(true)}className="rocket-details__section-1__img" src={rocket.flickr_images} alt=""/>
                     </div>
                     <div className="rocket-details__section-1__details-card-2">
                         <p className="rocket-details__section-1__details-card-2__description">{rocket.description}</p>
                     </div>
                 </div>
             </section>  
-            <section className={`rocket-details__section-2 ${(!loading && fetched) ? "rocket-details--active" : null}`}>
+            <section className={`rocket-details__section-2 ${((!loading && fetched) && imgLoaded) ? "rocket-details--active" : null}`}>
                 <p className="rocket-details__section-2__header">Specification Card</p>
                 <hr className="rocket-details__section-2__horizontal-rule"/>
                 <div className="rocket-details__section-2__details">

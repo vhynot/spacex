@@ -11,6 +11,13 @@
           align-items: center;
   width: 100%;
   min-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.careers-section-1--appear {
+  opacity: 1;
   background: url(../assets/img/joinus.jpg) no-repeat center center;
   background-position-x: 70%;
   background-size: cover;
@@ -48,8 +55,13 @@
   font-size: 30px;
   font-family: SansProLight;
   letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.careers-section-1__title-1--appear {
   -webkit-animation: title-anim-1 2s ease;
           animation: title-anim-1 2s ease;
+  opacity: 1;
 }
 
 .careers-section-1__title-2 {
@@ -58,8 +70,13 @@
   font-size: 45px;
   font-family: SansProBold;
   letter-spacing: 0.1em;
+  opacity: 0;
+}
+
+.careers-section-1__title-2--appear {
   -webkit-animation: title-anim-2 2s ease;
           animation: title-anim-2 2s ease;
+  opacity: 1;
 }
 
 .careers-section-2 {

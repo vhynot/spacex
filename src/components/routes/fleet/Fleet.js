@@ -17,6 +17,8 @@ function Fleet() {
 
   useEffect(() => {
     reset()
+    return () => {
+    }
   }, [])
 
   return (

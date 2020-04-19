@@ -1,6 +1,5 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
-
     .rocket-details {
         &-container {
         font-size: 0.9em;
@@ -10,9 +9,6 @@
             margin: 15%;
         }
     }
-
-
-  
   }
   
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -21,12 +17,11 @@
         &__section-1__details-card-1 {
             display:  flex;
             width: 85%;
-            margin: 2% 7.5%;
-            margin-top: 0;
+            margin: 0 7.5%;
         }
         &__section-2{
             width: 50%;
-            margin: 10% 25%;
+            margin: 5% 25%;
             &__header{
                 margin-top: 1%;
             }

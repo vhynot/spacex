@@ -12,12 +12,21 @@
         width: 100vw;
         min-height:63vh;
         background: #212940; 
-        background: -webkit-linear-gradient(to top,  #3d6387, #354e6f, #2b3b57, #212940, #15182a); 
-        background-image: linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);;
+        opacity: 0;
+        &--appear {
+            transition: opacity .3s;
+            opacity: 1;
+            background-image: linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
+        }
     }
     &__layer-2 {
         position: relative;
         width:110%;
+        opacity: 0;
+        &--appear {
+            transition: opacity .3s;
+            opacity: 1;
+        }
     }
     &__section-1 {
         &__title {
@@ -142,7 +151,7 @@
 }
 
 .svg-1 {
-    top: -8px;
+    top: -1px;
     left: -11px;
     width: 120%;
 }

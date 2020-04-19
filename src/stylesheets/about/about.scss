@@ -5,41 +5,26 @@
     text-align: center;
     width: 100%;
     height: 62vh;
-    background: url(../assets/img/Moon_rocket.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
+    opacity: 0;
     &--appear {
-        animation: action 1.3s ease;
+        background-image: url(../assets/img/Moon_rocket.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         opacity: 1;
         height: 52vh;
+        transition: all 1.3s ease;
     }
     &__text {
         font-family: SansProBold;
         text-shadow: 1.4px 1.4px #da4078;
         letter-spacing: 0.1em;
-        opacity: 1;
-        transition: letter-spacing 1.3s ease 0.95s;
+        opacity: 0;
         &--appear {
             opacity: 1;
             letter-spacing: 0.3em;
+            transition: letter-spacing 1.3s ease;
         }
-    }
-}
-
-@keyframes action {
-    0% {
-        height: 62vh;
-        opacity: 0;;
-    }
-    80% {
-        height: 62vh;
-        opacity: 1;
-    }
-    100% {
-        height: 52vh;
-        opacity: 1;
     }
 }
 

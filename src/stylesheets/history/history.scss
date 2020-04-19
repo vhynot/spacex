@@ -1,8 +1,13 @@
 .history {
     &__img {
-        background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
-        background-size: cover;
-        background-position-x: 36%;
+        opacity: 0;
+        transition:opacity .3s;
+        &--appear {
+            background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
+            background-size: cover;
+            background-position-x: 36%;
+            opacity: 1;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -11,6 +16,7 @@
             right: 0;
             height: 100%;
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+            transition: inherit;
         }
     }
     &__container {
@@ -68,7 +74,7 @@
         backdrop-filter: blur(5px) grayscale(10%) brightness(80%);
         box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
         opacity: 0;
-        transition: 0.5s all ease-in-out;
+        transition: 0.5s all ease-in-out 0.5s;
         &--appear {
             transform: translateY(0);
             opacity: 1;

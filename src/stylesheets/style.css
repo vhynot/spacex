@@ -482,31 +482,17 @@
   }
 }
 
-.fade--appear {
-  opacity: 0;
-}
-
-.fade--appear-active {
-  opacity: 0;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
-}
-
-.fade--appear-active-done {
-  opacity: 1;
-}
-
 .hp-section-title {
   height: auto;
   min-height: 100vh;
-  background: url(../assets/img/background1.jpg) no-repeat center center fixed;
-  background-size: cover;
   opacity: 0;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
 
 .hp-section-title--appear {
+  background: url(../assets/img/background1.jpg) no-repeat 50% fixed;
+  background-size: cover;
   opacity: 1;
 }
 
@@ -808,62 +794,32 @@ iframe {
   text-align: center;
   width: 100%;
   height: 62vh;
-  background: url(../assets/img/Moon_rocket.jpg);
+  opacity: 0;
+}
+
+.about-section-1--appear {
+  background-image: url(../assets/img/Moon_rocket.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;
-}
-
-.about-section-1--appear {
-  -webkit-animation: action 1.3s ease;
-          animation: action 1.3s ease;
-  opacity: 1;
   height: 52vh;
+  -webkit-transition: all 1.3s ease;
+  transition: all 1.3s ease;
 }
 
 .about-section-1__text {
   font-family: SansProBold;
   text-shadow: 1.4px 1.4px #da4078;
   letter-spacing: 0.1em;
-  opacity: 1;
-  -webkit-transition: letter-spacing 1.3s ease 0.95s;
-  transition: letter-spacing 1.3s ease 0.95s;
+  opacity: 0;
 }
 
 .about-section-1__text--appear {
   opacity: 1;
   letter-spacing: 0.3em;
-}
-
-@-webkit-keyframes action {
-  0% {
-    height: 62vh;
-    opacity: 0;
-  }
-  80% {
-    height: 62vh;
-    opacity: 1;
-  }
-  100% {
-    height: 52vh;
-    opacity: 1;
-  }
-}
-
-@keyframes action {
-  0% {
-    height: 62vh;
-    opacity: 0;
-  }
-  80% {
-    height: 62vh;
-    opacity: 1;
-  }
-  100% {
-    height: 52vh;
-    opacity: 1;
-  }
+  -webkit-transition: letter-spacing 1.3s ease;
+  transition: letter-spacing 1.3s ease;
 }
 
 .about-section-2 {
@@ -1083,9 +1039,11 @@ div.leaflet-control-attribution.leaflet-control {
     font-size: 1.4em;
     text-shadow: 1.4px 1.4px #da4078;
     letter-spacing: 0.2em;
+    opacity: 0;
   }
   .about-section-1__text--appear {
     letter-spacing: 0.4em;
+    opacity: 1;
   }
   .about-section-2 {
     font-size: 0.8em;
@@ -1098,9 +1056,11 @@ div.leaflet-control-attribution.leaflet-control {
     font-size: 1.8em;
     text-shadow: 1.6px 1.6px #da4078;
     letter-spacing: 0.3em;
+    opacity: 0;
   }
   .about-section-1__text--appear {
     letter-spacing: 0.5em;
+    opacity: 1;
   }
   .about-section-2 {
     font-size: 1em;
@@ -1190,8 +1150,10 @@ div.leaflet-control-attribution.leaflet-control {
   .about-section-1--text {
     font-size: 2em;
     letter-spacing: 0.4em;
+    opacity: 0;
   }
   .about-section-1--text--appear {
+    opacity: 1;
     letter-spacing: 0.7em;
   }
 }
@@ -1623,7 +1585,13 @@ div.leaflet-control-attribution.leaflet-control {
   width: 100vw;
   min-height: 63vh;
   background: #212940;
-  background: -webkit-linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
+  opacity: 0;
+}
+
+.rocket-details__layer-1--appear {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 1;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#3d6387), color-stop(#354e6f), color-stop(#2b3b57), color-stop(#212940), to(#15182a));
   background-image: linear-gradient(to top, #3d6387, #354e6f, #2b3b57, #212940, #15182a);
 }
@@ -1631,6 +1599,13 @@ div.leaflet-control-attribution.leaflet-control {
 .rocket-details__layer-2 {
   position: relative;
   width: 110%;
+  opacity: 0;
+}
+
+.rocket-details__layer-2--appear {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 1;
 }
 
 .rocket-details__section-1__title {
@@ -1783,7 +1758,7 @@ div.leaflet-control-attribution.leaflet-control {
 }
 
 .svg-1 {
-  top: -8px;
+  top: -1px;
   left: -11px;
   width: 120%;
 }
@@ -1814,12 +1789,11 @@ div.leaflet-control-attribution.leaflet-control {
     display: -ms-flexbox;
     display: flex;
     width: 85%;
-    margin: 2% 7.5%;
-    margin-top: 0;
+    margin: 0 7.5%;
   }
   .rocket-details__section-2 {
     width: 50%;
-    margin: 10% 25%;
+    margin: 5% 25%;
   }
   .rocket-details__section-2__header {
     margin-top: 1%;
@@ -1853,6 +1827,13 @@ div.leaflet-control-attribution.leaflet-control {
           align-items: center;
   width: 100%;
   min-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.careers-section-1--appear {
+  opacity: 1;
   background: url(../assets/img/joinus.jpg) no-repeat center center;
   background-position-x: 70%;
   background-size: cover;
@@ -1890,8 +1871,13 @@ div.leaflet-control-attribution.leaflet-control {
   font-size: 30px;
   font-family: SansProLight;
   letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.careers-section-1__title-1--appear {
   -webkit-animation: title-anim-1 2s ease;
           animation: title-anim-1 2s ease;
+  opacity: 1;
 }
 
 .careers-section-1__title-2 {
@@ -1900,8 +1886,13 @@ div.leaflet-control-attribution.leaflet-control {
   font-size: 45px;
   font-family: SansProBold;
   letter-spacing: 0.1em;
+  opacity: 0;
+}
+
+.careers-section-1__title-2--appear {
   -webkit-animation: title-anim-2 2s ease;
           animation: title-anim-2 2s ease;
+  opacity: 1;
 }
 
 .careers-section-2 {
@@ -2245,11 +2236,15 @@ select:-webkit-autofill:focus {
 @media (min-width: 576px) {
   .careers-section-1__title-1 {
     font-size: 45px;
+  }
+  .careers-section-1__title-1--appear {
     -webkit-animation: title-anim-1-mq 2s ease;
             animation: title-anim-1-mq 2s ease;
   }
   .careers-section-1__title-2 {
     font-size: 55px;
+  }
+  .careers-section-1__title-2--appear {
     -webkit-animation: title-anim-2-mq 2s ease;
             animation: title-anim-2-mq 2s ease;
   }
@@ -2339,9 +2334,16 @@ select:-webkit-autofill:focus {
 }
 
 .history__img {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.history__img--appear {
   background: url(../assets/img/crew-dragon.jpg) no-repeat fixed;
   background-size: cover;
   background-position-x: 36%;
+  opacity: 1;
 }
 
 .history__img::before {
@@ -2353,6 +2355,8 @@ select:-webkit-autofill:focus {
   height: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4)));
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  -webkit-transition: inherit;
+  transition: inherit;
 }
 
 .history__container {
@@ -2424,8 +2428,8 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
           box-shadow: 0 20px 25px -15px rgba(255, 255, 255, 0.3);
   opacity: 0;
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out 0.5s;
+  transition: 0.5s all ease-in-out 0.5s;
 }
 
 .history__moment--appear {

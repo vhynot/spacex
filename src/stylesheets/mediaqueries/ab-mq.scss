@@ -12,8 +12,10 @@
             font-size: 1.4em;
             text-shadow: 1.4px 1.4px #da4078;
             letter-spacing: 0.2em;
+            opacity: 0;
             &--appear {
                 letter-spacing: 0.4em;
+                opacity: 1;
             }
         }
     }
@@ -31,8 +33,10 @@
             font-size: 1.8em;
             text-shadow: 1.6px 1.6px #da4078;
             letter-spacing: 0.3em;
+            opacity: 0;
             &--appear {
                 letter-spacing: 0.5em;
+                opacity: 1;
             }
         }
     }
@@ -121,7 +125,9 @@
         &--text {
             font-size: 2em;
             letter-spacing: 0.4em;
+            opacity: 0;
             &--appear {
+                opacity: 1;
                 letter-spacing: 0.7em;
             }
         }

@@ -1,8 +1,11 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useContext} from 'react';
 import polygon from '../../../assets/img/poly.png';
 import InputForm from './Form';
+import background from '../../../assets/img/joinus.jpg';
+import {LoadingContext} from '../../../utilities/loadingContext/loadingContext'
 
 function Careers() {
+  const {careersLoading, handleCareersLoading} = useContext(LoadingContext);
   const [winWidth, setWinWidth] = useState(window.innerWidth);
   const extraStyle = {
     width: `${winWidth}px`
@@ -11,6 +14,16 @@ function Careers() {
   function handleResize() {
     setWinWidth(window.innerWidth)
   };
+  
+  useEffect(() => {
+    const img = new Image();
+    img.src = background;
+    if (!careersLoading){
+      img.onload = () => {
+        handleCareersLoading()
+      }
+    }
+  }, [])
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -19,23 +32,23 @@ function Careers() {
     }
   }, [winWidth]);
 
-    return (
-      <div>
-        <section className="careers-section-1">
-          <div className="careers-section-1__title-wrapper">
-            <p className="careers-section-1__title-1">We are the future</p> 
-            <p className="careers-section-1__title-2">JOIN US</p>   
-          </div>  
-        </section>
-        <section className="careers-section-2">
-          <img className="careers-section-2__polygon" style={extraStyle} src={polygon} alt="pol1" />
-          <div className="careers-section-2__form">
-            <InputForm />
-          </div>
-          <img className="careers-section-2__polygon rotate" style={extraStyle} src={polygon} alt="pol2" />
-        </section>
-      </div>
-    )
+  return (
+    <div>
+      <section className={`careers-section-1 ${careersLoading ? "careers-section-1--appear" : ""}`}>
+        <div className="careers-section-1__title-wrapper">
+          <p className={`careers-section-1__title-1 ${careersLoading ? "careers-section-1__title-1--appear" : ""}`}>We are the future</p> 
+          <p className={`careers-section-1__title-2 ${careersLoading ? "careers-section-1__title-2--appear" : ""}`}>JOIN US</p>   
+        </div>  
+      </section>
+      <section className="careers-section-2">
+        <img className="careers-section-2__polygon" style={extraStyle} src={polygon} alt="pol1" />
+        <div className="careers-section-2__form">
+          <InputForm />
+        </div>
+        <img className="careers-section-2__polygon rotate" style={extraStyle} src={polygon} alt="pol2" />
+      </section>
+    </div>
+  )
 }
 
 export default Careers;

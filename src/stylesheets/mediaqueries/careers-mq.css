@@ -2,11 +2,15 @@
 @media (min-width: 576px) {
   .careers-section-1__title-1 {
     font-size: 45px;
+  }
+  .careers-section-1__title-1--appear {
     -webkit-animation: title-anim-1-mq 2s ease;
             animation: title-anim-1-mq 2s ease;
   }
   .careers-section-1__title-2 {
     font-size: 55px;
+  }
+  .careers-section-1__title-2--appear {
     -webkit-animation: title-anim-2-mq 2s ease;
             animation: title-anim-2-mq 2s ease;
   }

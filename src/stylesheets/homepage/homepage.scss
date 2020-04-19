@@ -3,25 +3,15 @@
   justify-content: center;
   align-items: center;
 }
-.fade--appear{
-    opacity:0 ;
-    &-active {
-        opacity:  0;
-        transition: opacity 2s;
-        &-done {
-            opacity: 1;
-        }
-    }
-}
 
 .hp-section-title {
     height: auto;
     min-height: 100vh;
-    background: url(../assets/img/background1.jpg) no-repeat center center fixed; 
-    background-size: cover;
     opacity: 0;
     transition: opacity .3s;
     &--appear {
+        background: url(../assets/img/background1.jpg) no-repeat 50% fixed;
+        background-size: cover;
         opacity: 1;
     }
     &__layer {
@@ -30,7 +20,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: radial-gradient(circle, rgba(48,48,62,0.7) 15%, rgba(11,11,13,0.6) 80%);;
+        background: radial-gradient(circle, rgba(48,48,62,0.7) 15%, rgba(11,11,13,0.6) 80%);
     }
     &__header {
         position: relative;

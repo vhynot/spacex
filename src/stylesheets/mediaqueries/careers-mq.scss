@@ -4,11 +4,15 @@
     .careers-section-1 {
         &__title-1 {
             font-size: 45px;
-            animation: title-anim-1-mq 2s ease;
+            &--appear {
+                animation: title-anim-1-mq 2s ease;
+            }
         }
         &__title-2 {
             font-size: 55px;
-            animation: title-anim-2-mq 2s ease;
+            &--appear {
+                animation: title-anim-2-mq 2s ease;
+            }
         }
     }
     .form {

@@ -20,9 +20,7 @@ function App(){
     <ParallaxProvider>
       <Router>
         <ScrollToTop />
-        <Navbar onLoad={() => {
-          console.log("loaded")
-        }}/>
+        <Navbar />
           <Switch>
             <Route path="/" exact component={Homepage}  />
             <Route path="/about" component={About}  />
