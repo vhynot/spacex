@@ -12,7 +12,7 @@ function HistoricalEvent({item, loading, fetched, scrollHeight}) {
     useEffect(() => {
         if(fetched && !loading) {
             const val = refMoment.current.getBoundingClientRect().top;
-            if(val + 150 < innerHeight) {
+            if(val < innerHeight) {
                 setAppear(true)
             } 
         } 
