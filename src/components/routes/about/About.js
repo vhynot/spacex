@@ -2,16 +2,14 @@ import React, {useEffect, useContext} from 'react';
 import Leaflet from './map/Map';
 import background from '../../../assets/img/Moon_rocket.jpg'
 import {LoadingContext} from '../../../utilities/loadingContext/loadingContext'
+import useCreateImage from "../../../utilities/customHooks/useCreateImage";
 
 function About(){
   const {aboutLoading, handleAboutLoading} = useContext(LoadingContext);
+  const {imageOnLoad} = useCreateImage();
 
   useEffect(() => {
-    const img = new Image();
-    img.src = background;
-      img.onload = () => {
-        handleAboutLoading()
-      }
+    imageOnLoad(background, aboutLoading, handleAboutLoading)
   }, [])
 
   return (

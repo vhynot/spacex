@@ -1,11 +1,13 @@
 import React, {useState, useEffect, useContext} from 'react';
 import HistoricalEvent from "./HistoricalEvent";
 import useDataFetcher from "../../../utilities/customHooks/useDataFetcher";
+import useCreateImage from "../../../utilities/customHooks/useCreateImage";
 import {LoadingContext} from '../../../utilities/loadingContext/loadingContext';
 import background from '../../../assets/img/crew-dragon.jpg'
 
 function History() {
   const {historyLoading, handleHistoryLoading} = useContext(LoadingContext);
+  const {imageOnLoad} = useCreateImage();
   const param = "history";
   const {items, isLoading, isFetched} = useDataFetcher(param);
   const [scrollHeight, setScrollHeight] = useState(window.scrollY);
@@ -13,15 +15,9 @@ function History() {
   const handleScroll = () => {
     setScrollHeight(window.scrollY)
   }
-  
+
   useEffect(() => {
-    const img = new Image();
-    img.src = background;
-    if (!historyLoading){
-      img.onload = () => {
-          handleHistoryLoading()
-      }
-    }
+    imageOnLoad(background, historyLoading, handleHistoryLoading)
   }, [])
   
   useEffect(() => {

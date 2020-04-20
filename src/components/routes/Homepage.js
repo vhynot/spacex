@@ -3,18 +3,14 @@ import {Parallax} from 'react-scroll-parallax';
 import ReactPlayer from 'react-player';
 import {LoadingContext} from '../../utilities/loadingContext/loadingContext';
 import background from '../../assets/img/background1.jpg'
+import useCreateImage from "../../utilities/customHooks/useCreateImage";
 
 function Homepage(){
     const {homepageLoading, handleHomepageLoading} = useContext(LoadingContext);
+    const {imageOnLoad} = useCreateImage();
 
     useEffect(() => {
-        const img = new Image();
-        img.src = background;
-        if (!homepageLoading){
-            img.onload = () => {
-                handleHomepageLoading()
-            }
-        }
+        imageOnLoad(background, homepageLoading, handleHomepageLoading)
       }, [])
 
     return (

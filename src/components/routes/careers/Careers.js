@@ -3,9 +3,11 @@ import polygon from '../../../assets/img/poly.png';
 import InputForm from './Form';
 import background from '../../../assets/img/joinus.jpg';
 import {LoadingContext} from '../../../utilities/loadingContext/loadingContext'
+import useCreateImage from "../../../utilities/customHooks/useCreateImage";
 
 function Careers() {
   const {careersLoading, handleCareersLoading} = useContext(LoadingContext);
+  const {imageOnLoad} = useCreateImage();
   const [winWidth, setWinWidth] = useState(window.innerWidth);
   const extraStyle = {
     width: `${winWidth}px`
@@ -16,13 +18,7 @@ function Careers() {
   };
   
   useEffect(() => {
-    const img = new Image();
-    img.src = background;
-    if (!careersLoading){
-      img.onload = () => {
-        handleCareersLoading()
-      }
-    }
+    imageOnLoad(background, careersLoading, handleCareersLoading)
   }, [])
 
   useEffect(() => {
