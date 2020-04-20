@@ -1,8 +1,8 @@
 # SpaceXDEMO
 
-Project of company website designed as a part of practical usage of ReactJS, HTML, Sass according to BEM methodology, JS, NPM packages and fetching data through the SpaceX API.
+Project of company website designed as a part of practical usage of ReactJS (Hooks, customHooks, Context API), HTML, Sass according to BEM methodology, JS, NPM packages and fetching data through the SpaceX API.
 
-### Live demo: [SpaceXDEMO](https://vhynot.netlify.com/)
+### Live demo: [SpaceXDEMO](https://vhynot.netlify.app/)
 ## Getting started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -35,16 +35,6 @@ npm start
 
 Browser will automatically open `localhost:3000/`
 
-### Deployment
-
-To deploy application run:
-
-```
-npm run deploy
-```
-
-This will start a build process and push the production version to the `gh-pages` branch
-
 ## Built With
 
 - [Create React App](https://github.com/facebook/create-react-app) - Basic set up of React App.
@@ -52,6 +42,8 @@ This will start a build process and push the production version to the `gh-pages
 - [SpaceX API](https://github.com/r-spacex/SpaceX-API) - Subpages Fleet&RocketDetails makes AJAX call to SpaceX API.
 - [React Router](https://github.com/ReactTraining/react-router) -  Routing funcionality for React Apps.
 - [Leaflet](https://github.com/Leaflet/Leaflet) - JS library used to create interactive maps.
+- [Formik](https://github.com/jaredpalmer/formik) - Better way to make forms in React.
+
 
 ## License
 
