@@ -23,25 +23,19 @@
   src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: SansProRegular;
-  color: white;
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+  position: absolute;
 }
 
-#root {
-  background-color: rgba(0, 0, 7, 0.938);
+::-webkit-scrollbar-track {
+  background: #010108;
 }
 
-#root, body {
-  overflow-x: hidden;
-}
-
-#root a:focus, body a:focus {
-  outline: none;
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
 }
 
 @-webkit-keyframes transitionIn {
@@ -138,6 +132,27 @@
     width: 0;
     opacity: 0;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: SansProRegular;
+  color: white;
+}
+
+#root {
+  background-color: rgba(0, 0, 7, 0.938);
+}
+
+#root, body {
+  overflow-x: hidden;
+}
+
+#root a:focus, body a:focus {
+  outline: none;
 }
 
 .navbar {
