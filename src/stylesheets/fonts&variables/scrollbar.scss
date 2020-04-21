@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
+    position: absolute;
     width: 10px;
     background-color: transparent;
-    position: absolute;
 }
 
 ::-webkit-scrollbar-track {
@@ -9,6 +9,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: grey;
     border-radius: 10px;
+    background: grey;
 }

@@ -12,10 +12,9 @@
   }
   iframe {
     height: 70%;
-    margin: 15% auto;
   }
   .hp-section-main__horizontal-rule {
-    margin: 7% 15%;
+    margin: 0 20%;
   }
   .hp-section-main__description__text {
     height: 70%;
@@ -77,6 +76,9 @@
     text-align: center;
     width: 43%;
   }
+  .hp-section-main__description__video div div {
+    width: 100%;
+  }
   .hp-section-main__description__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -98,13 +100,12 @@
     letter-spacing: 0.2em;
   }
   .hp-section-main__horizontal-rule {
-    margin: 0 2%;
+    margin: 0%;
     border-color: rgba(49, 51, 78, 0.712);
   }
   iframe {
     width: 95%;
     height: 65%;
-    margin: 18% auto;
   }
 }
 
@@ -125,8 +126,6 @@
   iframe {
     height: 80%;
     width: 90%;
-    margin: 8% auto;
-    margin-bottom: 1.5%;
   }
 }
 
@@ -138,7 +137,6 @@
   iframe {
     height: 90%;
     width: 100%;
-    margin: 4% auto;
   }
 }
 /*# sourceMappingURL=hp-mq.css.map */

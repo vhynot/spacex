@@ -9,7 +9,6 @@ import Fleet from "./components/routes/fleet/Fleet";
 import RocketDetails from "./components/routes/fleet/rocketdetails/RocketDetails";
 import Careers from "./components/routes/careers/Careers";
 import History from "./components/routes/history/History";
-import {ParallaxProvider} from 'react-scroll-parallax';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ScrollToTop from "./utilities/window/ScrollToTop"
 
@@ -17,21 +16,19 @@ import ScrollToTop from "./utilities/window/ScrollToTop"
 function App(){
 
   return (
-    <ParallaxProvider>
-      <Router>
-        <ScrollToTop />
-        <Navbar />
-          <Switch>
-            <Route path="/" exact component={Homepage}  />
-            <Route path="/about" component={About}  />
-            <Route path="/fleet" exact component={Fleet} />
-            <Route path="/fleet/:rocket_id" component={RocketDetails} />
-            <Route path="/careers" component={Careers}  />
-            <Route path="/history" component={History}  />
-          </Switch>
-        <Footer/>
-      </Router>
-    </ParallaxProvider>
+    <Router>
+      <ScrollToTop />
+      <Navbar />
+        <Switch>
+          <Route path="/" exact component={Homepage}  />
+          <Route path="/about" component={About}  />
+          <Route path="/fleet" exact component={Fleet} />
+          <Route path="/fleet/:rocket_id" component={RocketDetails} />
+          <Route path="/careers" component={Careers}  />
+          <Route path="/history" component={History}  />
+        </Switch>
+      <Footer/>
+    </Router>
   )
 }
 

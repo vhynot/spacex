@@ -85,9 +85,16 @@
         &__video {
             @include flex();
             text-align: center;
-            width: 90vw;
+            width: 80%;
             height: 50%;
             margin: 0 auto;
+            div {
+                @include flex();
+                div{
+                    @include flex();
+                    width: 80%;
+                }
+            }
         }
         &__text {
             @include flex();
@@ -106,7 +113,5 @@
 
 iframe {
     height: 60%;
-    width: 85vw;
-    margin: 0 auto;
-    margin-top: 16%;
+    width: 100%;
   }

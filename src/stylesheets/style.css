@@ -23,21 +23,6 @@
   src: url("../assets/fonts/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: transparent;
-  position: absolute;
-}
-
-::-webkit-scrollbar-track {
-  background: #010108;
-}
-
-::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 10px;
-}
-
 @-webkit-keyframes transitionIn {
   from {
     min-height: 0vh;
@@ -132,6 +117,21 @@
     width: 0;
     opacity: 0;
   }
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #010108;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: grey;
 }
 
 * {
@@ -619,9 +619,34 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 90vw;
+  width: 80%;
   height: 50%;
   margin: 0 auto;
+}
+
+.hp-section-main__description__video div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hp-section-main__description__video div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
 }
 
 .hp-section-main__description__text {
@@ -647,9 +672,7 @@
 
 iframe {
   height: 60%;
-  width: 85vw;
-  margin: 0 auto;
-  margin-top: 16%;
+  width: 100%;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -666,10 +689,9 @@ iframe {
   }
   iframe {
     height: 70%;
-    margin: 15% auto;
   }
   .hp-section-main__horizontal-rule {
-    margin: 7% 15%;
+    margin: 0 20%;
   }
   .hp-section-main__description__text {
     height: 70%;
@@ -731,6 +753,9 @@ iframe {
     text-align: center;
     width: 43%;
   }
+  .hp-section-main__description__video div div {
+    width: 100%;
+  }
   .hp-section-main__description__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -752,13 +777,12 @@ iframe {
     letter-spacing: 0.2em;
   }
   .hp-section-main__horizontal-rule {
-    margin: 0 2%;
+    margin: 0%;
     border-color: rgba(49, 51, 78, 0.712);
   }
   iframe {
     width: 95%;
     height: 65%;
-    margin: 18% auto;
   }
 }
 
@@ -779,8 +803,6 @@ iframe {
   iframe {
     height: 80%;
     width: 90%;
-    margin: 8% auto;
-    margin-bottom: 1.5%;
   }
 }
 
@@ -792,7 +814,6 @@ iframe {
   iframe {
     height: 90%;
     width: 100%;
-    margin: 4% auto;
   }
 }
 
